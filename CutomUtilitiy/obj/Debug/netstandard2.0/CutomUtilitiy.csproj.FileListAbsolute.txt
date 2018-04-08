@@ -1,0 +1,6 @@
+c:\users\c.banisetty\Source\Repos\wireframe\CutomUtilitiy\bin\Debug\netstandard2.0\NUS.TheAmagingRace.CutomUtilitiy.deps.json
+c:\users\c.banisetty\Source\Repos\wireframe\CutomUtilitiy\bin\Debug\netstandard2.0\NUS.TheAmagingRace.CutomUtilitiy.dll
+c:\users\c.banisetty\Source\Repos\wireframe\CutomUtilitiy\obj\Debug\netstandard2.0\CutomUtilitiy.csprojResolveAssemblyReference.cache
+c:\users\c.banisetty\Source\Repos\wireframe\CutomUtilitiy\obj\Debug\netstandard2.0\CutomUtilitiy.csproj.CoreCompileInputs.cache
+c:\users\c.banisetty\Source\Repos\wireframe\CutomUtilitiy\obj\Debug\netstandard2.0\CutomUtilitiy.AssemblyInfoInputs.cache
+c:\users\c.banisetty\Source\Repos\wireframe\CutomUtilitiy\obj\Debug\netstandard2.0\CutomUtilitiy.AssemblyInfo.cs
