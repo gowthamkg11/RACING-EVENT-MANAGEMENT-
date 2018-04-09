@@ -1,0 +1,234 @@
+﻿[
+  {
+    "outputFile": "Content/spec/screens/email.css",
+    "inputFile": "Content/spec/screens/email.scss"
+  },
+  {
+    "outputFile": "Content/vendor/datepicker.css",
+    "inputFile": "Content/vendor/datepicker.scss"
+  },
+  {
+    "outputFile": "Content/spec/components/easyPieChart.css",
+    "inputFile": "Content/spec/components/easyPieChart.scss"
+  },
+  {
+    "outputFile": "Content/spec/components/footer.css",
+    "inputFile": "Content/spec/components/footer.scss"
+  },
+  {
+    "outputFile": "Content/spec/components/forms.css",
+    "inputFile": "Content/spec/components/forms.scss"
+  },
+  {
+    "outputFile": "Content/spec/components/index.css",
+    "inputFile": "Content/spec/components/index.scss"
+  },
+  {
+    "outputFile": "Content/spec/components/loader.css",
+    "inputFile": "Content/spec/components/loader.scss"
+  },
+  {
+    "outputFile": "Content/spec/components/masonry.css",
+    "inputFile": "Content/spec/components/masonry.scss"
+  },
+  {
+    "outputFile": "Content/spec/components/pageContainer.css",
+    "inputFile": "Content/spec/components/pageContainer.scss"
+  },
+  {
+    "outputFile": "Content/spec/components/progressBar.css",
+    "inputFile": "Content/spec/components/progressBar.scss"
+  },
+  {
+    "outputFile": "Content/spec/components/sidebar.css",
+    "inputFile": "Content/spec/components/sidebar.scss"
+  },
+  {
+    "outputFile": "Content/spec/components/topbar.css",
+    "inputFile": "Content/spec/components/topbar.scss"
+  },
+  {
+    "outputFile": "Content/vendor/sparkline.css",
+    "inputFile": "Content/vendor/sparkline.scss"
+  },
+  {
+    "outputFile": "Content/index.css",
+    "inputFile": "Content/index.scss"
+  },
+  {
+    "outputFile": "Content/spec/generic/base.css",
+    "inputFile": "Content/spec/generic/base.scss"
+  },
+  {
+    "outputFile": "Content/spec/generic/index.css",
+    "inputFile": "Content/spec/generic/index.scss"
+  },
+  {
+    "outputFile": "Content/spec/screens/chat.css",
+    "inputFile": "Content/spec/screens/chat.scss"
+  },
+  {
+    "outputFile": "Content/spec/screens/index.css",
+    "inputFile": "Content/spec/screens/index.scss"
+  },
+  {
+    "outputFile": "Content/spec/settings/baseColors.css",
+    "inputFile": "Content/spec/settings/baseColors.scss"
+  },
+  {
+    "outputFile": "Content/spec/settings/borders.css",
+    "inputFile": "Content/spec/settings/borders.scss"
+  },
+  {
+    "outputFile": "Content/spec/settings/brandColors.css",
+    "inputFile": "Content/spec/settings/brandColors.scss"
+  },
+  {
+    "outputFile": "Content/spec/settings/breakpoints.css",
+    "inputFile": "Content/spec/settings/breakpoints.scss"
+  },
+  {
+    "outputFile": "Content/spec/settings/fonts.css",
+    "inputFile": "Content/spec/settings/fonts.scss"
+  },
+  {
+    "outputFile": "Content/spec/settings/index.css",
+    "inputFile": "Content/spec/settings/index.scss"
+  },
+  {
+    "outputFile": "Content/spec/settings/materialColors.css",
+    "inputFile": "Content/spec/settings/materialColors.scss"
+  },
+  {
+    "outputFile": "Content/spec/tools/index.css",
+    "inputFile": "Content/spec/tools/index.scss"
+  },
+  {
+    "outputFile": "Content/spec/tools/mixins/placeholder.css",
+    "inputFile": "Content/spec/tools/mixins/placeholder.scss"
+  },
+  {
+    "outputFile": "Content/spec/tools/mixins/mediaQueriesRanges.css",
+    "inputFile": "Content/spec/tools/mixins/mediaQueriesRanges.scss"
+  },
+  {
+    "outputFile": "Content/spec/tools/mixins/index.css",
+    "inputFile": "Content/spec/tools/mixins/index.scss"
+  },
+  {
+    "outputFile": "Content/spec/tools/mixins/clearfix.css",
+    "inputFile": "Content/spec/tools/mixins/clearfix.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/index.css",
+    "inputFile": "Content/spec/utils/index.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/colors.css",
+    "inputFile": "Content/spec/utils/colors.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/layout/index.css",
+    "inputFile": "Content/spec/utils/layout/index.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/layout/utils/peers.css",
+    "inputFile": "Content/spec/utils/layout/utils/peers.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/layout/utils/layers.css",
+    "inputFile": "Content/spec/utils/layout/utils/layers.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/layout/utils/index.css",
+    "inputFile": "Content/spec/utils/layout/utils/index.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/layout/utils/gap.css",
+    "inputFile": "Content/spec/utils/layout/utils/gap.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/layout/utils/center.css",
+    "inputFile": "Content/spec/utils/layout/utils/center.scss"
+  },
+  {
+    "outputFile": "Content/vendor/fullcalendar.css",
+    "inputFile": "Content/vendor/fullcalendar.scss"
+  },
+  {
+    "outputFile": "Content/vendor/index.css",
+    "inputFile": "Content/vendor/index.scss"
+  },
+  {
+    "outputFile": "Content/vendor/jquery.datatables.css",
+    "inputFile": "Content/vendor/jquery.datatables.scss"
+  },
+  {
+    "outputFile": "Content/vendor/perfectScrollbar.css",
+    "inputFile": "Content/vendor/perfectScrollbar.scss"
+  },
+  {
+    "outputFile": "Content/spec/index.css",
+    "inputFile": "Content/spec/index.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/layout/helpers/border.css",
+    "inputFile": "Content/spec/utils/layout/helpers/border.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/layout/helpers/flex.css",
+    "inputFile": "Content/spec/utils/layout/helpers/flex.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/layout/helpers/index.css",
+    "inputFile": "Content/spec/utils/layout/helpers/index.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/layout/helpers/layout.css",
+    "inputFile": "Content/spec/utils/layout/helpers/layout.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/layout/helpers/lists.css",
+    "inputFile": "Content/spec/utils/layout/helpers/lists.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/layout/helpers/margin.css",
+    "inputFile": "Content/spec/utils/layout/helpers/margin.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/layout/helpers/objects.css",
+    "inputFile": "Content/spec/utils/layout/helpers/objects.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/layout/helpers/padding.css",
+    "inputFile": "Content/spec/utils/layout/helpers/padding.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/layout/helpers/positions.css",
+    "inputFile": "Content/spec/utils/layout/helpers/positions.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/layout/helpers/pseudo.css",
+    "inputFile": "Content/spec/utils/layout/helpers/pseudo.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/layout/helpers/sizes.css",
+    "inputFile": "Content/spec/utils/layout/helpers/sizes.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/layout/helpers/typography.css",
+    "inputFile": "Content/spec/utils/layout/helpers/typography.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/layout/mixins/generateResponsive.css",
+    "inputFile": "Content/spec/utils/layout/mixins/generateResponsive.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/layout/mixins/mediaQueryCondition.css",
+    "inputFile": "Content/spec/utils/layout/mixins/mediaQueryCondition.scss"
+  },
+  {
+    "outputFile": "Content/spec/utils/layout/mixins/index.css",
+    "inputFile": "Content/spec/utils/layout/mixins/index.scss"
+  }
+]
