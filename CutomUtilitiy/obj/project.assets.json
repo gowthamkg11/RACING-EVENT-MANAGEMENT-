@@ -2935,23 +2935,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\c.banisetty\\.nuget\\packages\\": {},
+    "C:\\Users\\Ragu\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\c.banisetty\\Source\\Repos\\wireframe\\CutomUtilitiy\\NUS.TheAmagingRace.CustomUtilitiy.csproj",
+      "projectUniqueName": "C:\\c# programming\\Amazing race\\The-Amaging-Race\\CutomUtilitiy\\NUS.TheAmagingRace.CustomUtilitiy.csproj",
       "projectName": "NUS.TheAmagingRace.CutomUtilitiy",
-      "projectPath": "C:\\Users\\c.banisetty\\Source\\Repos\\wireframe\\CutomUtilitiy\\NUS.TheAmagingRace.CustomUtilitiy.csproj",
-      "packagesPath": "C:\\Users\\c.banisetty\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\c.banisetty\\Source\\Repos\\wireframe\\CutomUtilitiy\\obj\\",
+      "projectPath": "C:\\c# programming\\Amazing race\\The-Amaging-Race\\CutomUtilitiy\\NUS.TheAmagingRace.CustomUtilitiy.csproj",
+      "packagesPath": "C:\\Users\\Ragu\\.nuget\\packages\\",
+      "outputPath": "C:\\c# programming\\Amazing race\\The-Amaging-Race\\CutomUtilitiy\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\c.banisetty\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ragu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
