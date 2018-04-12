@@ -15,9 +15,7 @@ namespace NUS.TheAmagingRace.DAL
 
     public class TARUser : IdentityUser, IAuditedEntity
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public override string Id { get => base.Id; set => base.Id = value; }
-
+       
         public DateTime CreatedAt { get; set; }
         public DateTime LastModifiedAt { get; set; }
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<TARUser> manager)

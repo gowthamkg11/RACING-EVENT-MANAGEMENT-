@@ -2,7 +2,7 @@
 
 namespace NUS.TheAmagingRace.DAL
 {
-    public class PitStop
+    public class PitStop:BaseEntity
     {
         [Key]
         public int PitStopID { get; set; }

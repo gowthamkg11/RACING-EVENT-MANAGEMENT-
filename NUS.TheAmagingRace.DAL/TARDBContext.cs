@@ -30,23 +30,37 @@ namespace NUS.TheAmagingRace.DAL
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
 
 
-            modelBuilder.Entity<TARUser>()
-             .Property(c => c.Id)
-             .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            //modelBuilder.Entity<TARUser>()
+            // .Property(c => c.Id)
+            // .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            modelBuilder.Entity<TARUser>().Property(f => f.CreatedAt).HasColumnType("datetime2");
+            modelBuilder.Entity<TARUser>().Property(f => f.LastModifiedAt).HasColumnType("datetime2");
 
-            modelBuilder.Entity<Event>()
-                .Property(c => c.EventID)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            modelBuilder.Entity<Team>()
-               .Property(c => c.TeamID)
-               .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            //modelBuilder.Entity<Event>()
+            //    .Property(c => c.EventID)
+            //    .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            modelBuilder.Entity<Event>().Property(f => f.CreatedAt).HasColumnType("datetime2");
+            modelBuilder.Entity<Event>().Property(f => f.LastModifiedAt).HasColumnType("datetime2");
 
-            modelBuilder.Entity<Location>()
-                .Property(c => c.LocationId)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            modelBuilder.Entity<PitStop>()
-                .Property(c => c.PitStopID)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            //modelBuilder.Entity<Team>()
+            //   .Property(c => c.TeamID)
+            //   .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            modelBuilder.Entity<Team>().Property(f => f.CreatedAt).HasColumnType("datetime2");
+            modelBuilder.Entity<Team>().Property(f => f.LastModifiedAt).HasColumnType("datetime2");
+
+
+            //modelBuilder.Entity<Location>()
+            //    .Property(c => c.LocationId)
+            //    .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            modelBuilder.Entity<TARUser>().Property(f => f.CreatedAt).HasColumnType("datetime2");
+            modelBuilder.Entity<TARUser>().Property(f => f.LastModifiedAt).HasColumnType("datetime2");
+
+            //modelBuilder.Entity<PitStop>()
+            //    .Property(c => c.PitStopID)
+            //    .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            modelBuilder.Entity<PitStop>().Property(f => f.CreatedAt).HasColumnType("datetime2");
+            modelBuilder.Entity<PitStop>().Property(f => f.LastModifiedAt).HasColumnType("datetime2");
+
 
             base.OnModelCreating(modelBuilder);
 
@@ -63,7 +77,7 @@ namespace NUS.TheAmagingRace.DAL
               .Where(p => p.State == EntityState.Modified)
               .Select(p => p.Entity);
 
-            var now = DateTime.UtcNow;
+            var now = DateTime.Now;
 
             foreach (var added in addedAuditedEntities)
             {
