@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace NUS.TheAmagingRace.CutsomUtilitiy
+namespace NUS.TheAmagingRace.Utilities
 {
     public static class HeroicAutoMapperConfigurator
     {

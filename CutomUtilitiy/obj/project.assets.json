@@ -2935,23 +2935,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ragu\\.nuget\\packages\\": {},
+    "C:\\Users\\c.banisetty\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\c# programming\\Amazing race\\The-Amaging-Race\\CutomUtilitiy\\NUS.TheAmagingRace.CustomUtilitiy.csproj",
+      "projectUniqueName": "D:\\Study\\Semester 2\\Electives\\Enterprise.net\\theamazingrace\\The-Amaging-Race\\CutomUtilitiy\\NUS.TheAmagingRace.CustomUtilitiy.csproj",
       "projectName": "NUS.TheAmagingRace.CutomUtilitiy",
-      "projectPath": "C:\\c# programming\\Amazing race\\The-Amaging-Race\\CutomUtilitiy\\NUS.TheAmagingRace.CustomUtilitiy.csproj",
-      "packagesPath": "C:\\Users\\Ragu\\.nuget\\packages\\",
-      "outputPath": "C:\\c# programming\\Amazing race\\The-Amaging-Race\\CutomUtilitiy\\obj\\",
+      "projectPath": "D:\\Study\\Semester 2\\Electives\\Enterprise.net\\theamazingrace\\The-Amaging-Race\\CutomUtilitiy\\NUS.TheAmagingRace.CustomUtilitiy.csproj",
+      "packagesPath": "C:\\Users\\c.banisetty\\.nuget\\packages\\",
+      "outputPath": "D:\\Study\\Semester 2\\Electives\\Enterprise.net\\theamazingrace\\The-Amaging-Race\\CutomUtilitiy\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Ragu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\c.banisetty\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

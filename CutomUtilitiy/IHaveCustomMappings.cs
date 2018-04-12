@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using System;
 
-namespace NUS.TheAmagingRace.CutsomUtilitiy
+namespace NUS.TheAmagingRace.Utilities
 {
     public interface IHaveCustomMappings
     {
