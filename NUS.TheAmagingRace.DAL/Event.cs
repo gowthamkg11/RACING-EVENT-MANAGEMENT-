@@ -6,40 +6,41 @@ namespace NUS.TheAmagingRace.DAL
 {
     public class Event: BaseEntity
     {
+        
         [Key]
         public int EventID { get; set; }
 
-
+        [Required]
         [Display(Name = "Event Name")]
         public string EventName { get; set; }
 
-
+       
         [Display(Name = "Description")]
         public string EventDescription { get; set; }
 
-
+        [Required]
         [Display(Name = "Country")]
         public string EventCountry { get; set; }
 
-
+        [Required]
         [Display(Name = "City")]
         public string EventCity { get; set; }
-
-        [DataType(DataType.Date)]
+        [Required]
+        [DataType(DataType.Date,ErrorMessage ="Enter Correct Format")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Display(Name = "Start Date")]
         public DateTime StartDate { get; set; }
-
-        [DataType(DataType.Date)]
+        [Required]
+        [DataType(DataType.Date, ErrorMessage = "Enter Correct Format")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Display(Name = "End Date")]
         public DateTime EndDate { get; set; }
 
-        [Range(1, 5)]
+        [Required]
         [Display(Name = "PitStops")]
         public int TotalPitStops { get; set; }
 
-        [Range(1, 10)]
+        [Required]
         [Display(Name = "Teams")]
         public int TotalTeams { get; set; }
 

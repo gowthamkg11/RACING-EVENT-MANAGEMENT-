@@ -16,16 +16,42 @@ namespace NUS.TheAmazingRace.Web.Controllers
         private TARDBContext db = new TARDBContext();
         private Event events = new Event();
 
+
+        [HttpGet]
         public ActionResult Index()
         {
 
             return View(db.Events.ToList());
         }
-
-
-        public ActionResult CreateEvent()
+        [HttpPost]
+        public ActionResult Index(Event eventModel)
         {
-            return View();
+            if (eventModel.EventID > 0)
+            {
+                Event editEvents = db.Events.SingleOrDefault(x => x.EventID == eventModel.EventID);
+                editEvents.EventName = eventModel.EventName;
+                editEvents.EventDescription = eventModel.EventDescription;
+                editEvents.EventCountry = eventModel.EventCountry;
+                editEvents.EventCity = eventModel.EventCity;
+                editEvents.StartDate = eventModel.StartDate;
+                editEvents.EndDate = eventModel.EndDate;
+                editEvents.TotalPitStops = eventModel.TotalPitStops;
+                editEvents.TotalTeams = eventModel.TotalTeams;
+                db.SaveChanges();
+            }
+            else
+            {
+                db.Events.Add(eventModel);
+                db.SaveChanges();
+            }
+           return View(db.Events.ToList());
+        }
+
+
+        public ActionResult CreateEvent(Event eventModel)
+        {
+          
+            return PartialView("_CreateEvent");
         }
 
         public JsonResult DeleteEvent(int eventId)

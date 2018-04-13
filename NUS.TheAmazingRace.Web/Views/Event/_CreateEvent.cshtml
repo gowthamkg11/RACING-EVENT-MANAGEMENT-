@@ -1,11 +1,11 @@
 ﻿@model NUS.TheAmagingRace.DAL.Event
 
 
-
-<form id="editForm">
+<form id="addForm">
     @Html.AntiForgeryToken()
-   @Html.HiddenFor(model => model.EventID, htmlAttributes: new { @class = "control-label col-md-2" })
+    
     <div class="form-horizontal">
+        
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.EventName, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -54,6 +54,7 @@
                 @Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger" })
             </div>
         </div>
+
         <div class="form-group">
             @Html.LabelFor(model => model.TotalPitStops, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -61,6 +62,7 @@
                 @Html.ValidationMessageFor(model => model.TotalPitStops, "", new { @class = "text-danger" })
             </div>
         </div>
+
         <div class="form-group">
             @Html.LabelFor(model => model.TotalTeams, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -71,7 +73,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <a href="#" id="btnsubmit" class="btn btn-success">Update</a>
+                <a href="#" id="btncreate" class="btn btn-success">Add</a>
             </div>
         </div>
     </div>
@@ -83,24 +85,23 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
-
 }
 <script>
     $(document).ready(function () {
-        $("#btnsubmit").click(function () {
+        $("#btncreate").click(function () {
             $("#loaderDiv").show();
-            var formData = $("#editForm").serialize();
+            var formData = $("#addForm").serialize();
             $.ajax({
                 type: "POST",
                 url: "/Event/Index",
                 data: formData,
                 success: function () {
-                    $("#loaderDiv").hide(); 
-                    $("#ModalEdit").modal("hide");
+                    $("#loaderDiv").hide();
+                    $("#ModalAdd").modal("hide");
                     window.location.href = "/Event/Index";
                 }
             })
 
         })
     })
-</script>
+ </script>

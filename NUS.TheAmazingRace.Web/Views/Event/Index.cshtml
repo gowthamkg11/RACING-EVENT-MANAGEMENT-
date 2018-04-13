@@ -4,14 +4,12 @@
     Layout = "~/Views/Shared/_StaffLayout.cshtml";
     ViewBag.Title = "Index";
 }
-<script src="~/Scripts/jquery-1.10.2.min.js"></script>
-<script src="~/Scripts/bootstrap.min.js"></script>
-<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
 
 <h2>Events</h2>
 
 <p>
-    <a href="#" class="btn-primary" data-toggle="modal" data-target="#createEventModal">Create</a>
+    <a href="#" class="btn btn-success" onclick="AddEvent()">Create</a>
 </p>
 @if (Model.Count() > 0)
 {
@@ -85,8 +83,8 @@
 }
 else
 {
-    <h2>No events to display </h2>
-    <h1>Click create to add events</h1>
+    <p align="right">No events to display </p>
+    <p align="right">Click create to add events</p>
 }
 
 <div class="modal fade" id="myModal">
@@ -134,6 +132,26 @@ else
     </div>
 </div>
 
+<div class="modal fade" id="ModalAdd">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h3 class="modal-title">Create Event</h3>
+
+            </div>
+
+            <div class="modal-body" id="ModalBodyAdd">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
 <script>
     var ConfirmDelete = function (eventId) {
         $("#hiddenEventId").val(eventId)
@@ -146,7 +164,7 @@ else
         var eventId = $("#hiddenEventId").val();
         $.ajax({
             type: "POST",
-            url: "Event/DeleteEvent",
+            url: '@Url.Action("DeleteEvent","Event")',
             data: { EventId: eventId },
             success: function (result) {
                 $("#loaderDiv").hide();
@@ -163,6 +181,16 @@ else
             $("#ModalEdit").modal("show");
         })
     }
+
+    var AddEvent = function () {
+        var url = "/Event/CreateEvent";
+
+        $("#ModalBodyAdd").load(url, function () {
+            $("#ModalAdd").modal("show");
+        })
+    }
+
+
 </script>
 
 
