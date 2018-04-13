@@ -13,7 +13,7 @@ namespace NUS.TheAmagingRace.DAL
     public class TARDBContext : IdentityDbContext<TARUser>
     {
         public TARDBContext()
-        : base("TARDBConnection")
+        : base("TARDBConnection", throwIfV1Schema: false)
         {
             Database.SetInitializer<TARDBContext>(new TestDataInitializer());
             Configuration.ProxyCreationEnabled = false;

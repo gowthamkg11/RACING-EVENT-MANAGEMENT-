@@ -1,0 +1,170 @@
+﻿@model IEnumerable<NUS.TheAmagingRace.DAL.Event>
+
+@{
+    Layout = "~/Views/Shared/_StaffLayout.cshtml";
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<h2>Events</h2>
+
+<p>
+    <a href="#" class="btn-primary" data-toggle="modal" data-target="#createEventModal">Create</a>
+</p>
+@if (Model.Count() > 0)
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EventName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventCountry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalPitStops)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalTeams)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr id="row_@item.EventID">
+                <td>
+                    @Html.DisplayFor(modelItem => item.EventName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EventDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EventCountry)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EventCity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalPitStops)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalTeams)
+                </td>
+                <td>
+                    <a href="#" class="btn btn-danger" onclick="EditEvent(@item.EventID)"><i class="glyphicon glyphicon-pencil"></i></a>
+                    <a href="#" class="btn btn-danger" onclick="ConfirmDelete(@item.EventID)"><i class="glyphicon glyphicon-trash"></i></a>
+
+
+                </td>
+            </tr>
+        }
+
+    </table>
+    <input type="hidden" id="hiddenEventId" />
+}
+else
+{
+    <h2>No events to display </h2>
+    <h1>Click create to add events</h1>
+}
+
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h3 class="modal-title">Delete Event</h3>
+
+            </div>
+
+            <div class="modal-body">
+                <h4>Are you sure to delete this?</h4>
+
+                <div style="text-align:center;display:none" id="loaderDiv">
+                    <img src="~/Content/Images/InternetSlowdown_Day.gif" width="150" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-default" data-dismiss="modal">cancel</a>
+                <a href="#" class="btn btn-success" onclick="DeleteEvent()">Confirm</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="ModalEdit">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h3 class="modal-title">Edit Event</h3>
+
+            </div>
+
+            <div class="modal-body" id="ModalBodyEdit">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    var ConfirmDelete = function (eventId) {
+        $("#hiddenEventId").val(eventId)
+        $("#myModal").modal('show');
+
+    }
+
+    var DeleteEvent = function () {
+        $("#loaderDiv").show();
+        var eventId = $("#hiddenEventId").val();
+        $.ajax({
+            type: "POST",
+            url: "Event/DeleteEvent",
+            data: { EventId: eventId },
+            success: function (result) {
+                $("#loaderDiv").hide();
+                $("#myModal").modal('hide');
+                $("#row_" + eventId).remove();
+            }
+
+        })
+    }
+    var EditEvent = function (eventId) {
+        var url = "/Event/EditEvent?EventID=" + eventId;
+
+        $("#ModalBodyEdit").load(url, function () {
+            $("#ModalEdit").modal("show");
+        })
+    }
+</script>
+
+
+
+
