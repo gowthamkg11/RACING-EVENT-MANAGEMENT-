@@ -215,10 +215,48 @@
     <Content Include="App_Data\TARDBConnection_log.ldf">
       <DependentUpon>TARDBConnection.mdf</DependentUpon>
     </Content>
+    <Content Include="Assets\css\bootstrap.css" />
+    <Content Include="Assets\css\bootstrap.min.css" />
+    <Content Include="Assets\css\demo.css" />
+    <Content Include="Assets\css\main.css" />
+    <Content Include="Assets\Libraries\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Assets\Libraries\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Assets\Libraries\bootstrap\css\bootstrap.css" />
+    <Content Include="Assets\Libraries\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Assets\Libraries\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\Libraries\bootstrap\js\bootstrap.js" />
+    <Content Include="Assets\Libraries\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Assets\Libraries\bootstrap\js\npm.js" />
+    <Content Include="Assets\Libraries\chartist\css\chartist-custom.css" />
+    <Content Include="Assets\Libraries\chartist\css\chartist.css" />
+    <Content Include="Assets\Libraries\chartist\css\chartist.min.css" />
+    <Content Include="Assets\Libraries\chartist\js\chartist.js" />
+    <Content Include="Assets\Libraries\chartist\js\chartist.min.js" />
+    <Content Include="Assets\Libraries\font-awesome\css\font-awesome.css" />
+    <Content Include="Assets\Libraries\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Assets\Libraries\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\Libraries\jquery-slimscroll\jquery.slimscroll.js" />
+    <Content Include="Assets\Libraries\jquery-slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="Assets\Libraries\jquery.easy-pie-chart\angular.easypiechart.js" />
+    <Content Include="Assets\Libraries\jquery.easy-pie-chart\angular.easypiechart.min.js" />
+    <Content Include="Assets\Libraries\jquery.easy-pie-chart\easypiechart.js" />
+    <Content Include="Assets\Libraries\jquery.easy-pie-chart\easypiechart.min.js" />
+    <Content Include="Assets\Libraries\jquery.easy-pie-chart\jquery.easypiechart.js" />
+    <Content Include="Assets\Libraries\jquery.easy-pie-chart\jquery.easypiechart.min.js" />
+    <Content Include="Assets\Libraries\jquery\jquery.js" />
+    <Content Include="Assets\Libraries\jquery\jquery.min.js" />
+    <Content Include="Assets\Libraries\linearicons\fonts\Linearicons-Free.svg" />
+    <Content Include="Assets\Libraries\linearicons\style.css" />
+    <Content Include="Assets\Libraries\toastr\toastr.css" />
+    <Content Include="Assets\Libraries\toastr\toastr.js" />
+    <Content Include="Assets\Libraries\toastr\toastr.min.css" />
+    <Content Include="Assets\Libraries\toastr\toastr.min.js" />
+    <Content Include="Assets\scripts\klorofil-common.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\SideBar.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -226,6 +264,26 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config" />
+    <Content Include="Assets\Libraries\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\Libraries\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\Libraries\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\Libraries\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Assets\Libraries\chartist\css\chartist-custom.css.map" />
+    <Content Include="Assets\Libraries\chartist\map\chartist.css.map" />
+    <Content Include="Assets\Libraries\chartist\map\chartist.min.js.map" />
+    <Content Include="Assets\Libraries\chartist\scss\chartist.scss" />
+    <Content Include="Assets\Libraries\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\Libraries\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\Libraries\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\Libraries\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\Libraries\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Assets\Libraries\jquery\jquery.min.map" />
+    <Content Include="Assets\Libraries\linearicons\fonts\Linearicons-Free.eot" />
+    <Content Include="Assets\Libraries\linearicons\fonts\Linearicons-Free.ttf" />
+    <Content Include="Assets\Libraries\linearicons\fonts\Linearicons-Free.woff" />
+    <Content Include="Assets\Libraries\linearicons\fonts\Linearicons-Free.woff2" />
+    <Content Include="Assets\css\demo.css.map" />
+    <Content Include="Assets\css\main.css.map" />
     <None Include="Scripts\jquery-1.10.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -273,6 +331,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_StaffLayout.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
