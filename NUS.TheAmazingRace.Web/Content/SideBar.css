@@ -194,9 +194,10 @@ a.article, a.article:hover {
     CONTENT STYLE
 ----------------------------------------------------- */
 #content {
-    padding: 20px;
+    padding: 0px;
     min-height: 100vh;
     transition: all 0.3s;
+    width:100% !important;
 }
 
 

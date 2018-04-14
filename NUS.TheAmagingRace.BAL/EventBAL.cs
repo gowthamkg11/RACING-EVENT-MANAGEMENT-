@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NUS.TheAmagingRace.BAL
 {
-    public class EventBAL
+    public class EventBAL : IEventBAL
     {
         private TARDBContext db = new TARDBContext();
         private Event events = new Event();

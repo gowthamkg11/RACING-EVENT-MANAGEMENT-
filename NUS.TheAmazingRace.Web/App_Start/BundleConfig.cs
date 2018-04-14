@@ -26,7 +26,7 @@ namespace NUS.TheAmazingRace.Web
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.min.css",
-                      "~/Content/SideBar.css"
+                      "~/Content/SideBar.css", "~/Content/Site.css"
                       ));
 
           

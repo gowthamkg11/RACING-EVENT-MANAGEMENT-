@@ -26,56 +26,46 @@
 
             <ul class="list-unstyled components">
                 <li class="active">
-                    <a href=" @Url.Action("Index","Home")" >
+                    <a href=" @Url.Action("Index","Home")">
                         <i class="glyphicon glyphicon-home"></i>
                         Home
                     </a>
-                    
+
                 </li>
                 <li>
                     <a href=" @Url.Action("Index","Event")">
                         <i class="glyphicon glyphicon-briefcase"></i>
                         Event Management
                     </a>
-                   
+
                 </li>
-                <li>
-                    <a href="#">
-                        <i class="glyphicon glyphicon-link"></i>
-                        Member Management
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="glyphicon glyphicon-wrench"></i>
-                        PitStop Check in
-                    </a>
-                </li>
-               
             </ul>
 
         </nav>
         <!-- MAIN -->
         <!-- Page Content Holder -->
-        <div id="content">
+        <div id="content" class="container-fluid">
 
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
-
                     <div class="navbar-header">
-                        <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                        <button type="button" id="sidebarCollapse" class="btn navbar-btn">
                             <i class="glyphicon glyphicon-align-left"></i>
 
                         </button>
-                    </div>
-                    <ul class="nav nav-divider navbar-nav  navbar-right ">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                    </ul>
 
+                        @Html.ActionLink("The Amaging Race", "Index", "Home", null, new { @class = "navbar-brand" })
+
+                    </div>
+                    <div class="navbar-collapse collapse">
+
+                        @Html.Partial("_LoginPartial")
+                    </div>
                 </div>
             </nav>
-            @RenderBody()
+            <div class="container body-content">
+                @RenderBody()
+            </div>
         </div>
 
     </div>

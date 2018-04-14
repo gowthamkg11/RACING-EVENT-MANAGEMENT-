@@ -12,6 +12,7 @@ namespace NUS.TheAmagingRace.DAL
 {
     public class TARDBContext : IdentityDbContext<TARUser>
     {
+
         public TARDBContext()
         : base("TARDBConnection", throwIfV1Schema: false)
         {

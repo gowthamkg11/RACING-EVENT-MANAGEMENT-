@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewBag.Title - The Amaging Race</title>
+    @Styles.Render("~/Content/css")
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+
+
+    @*@Scripts.Render("~/bundles/modernizr")*@
+
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>The Amazing Race</h3>
+                <strong>T A R</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href=" @Url.Action("Index","Home")">
+                        <i class="glyphicon glyphicon-home"></i>
+                        Home
+                    </a>
+
+                </li>
+           
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-wrench"></i>
+                        PitStop Check in
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+        <!-- MAIN -->
+        <!-- Page Content Holder -->
+        <div id="content" class="container-fluid">
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                            <i class="glyphicon glyphicon-align-left"></i>
+
+                        </button>
+
+                        @Html.ActionLink("The Amaging Race", "Index", "Home", null, new { @class = "navbar-brand" })
+
+                    </div>
+                    <div class="navbar-collapse collapse">
+
+                        @Html.Partial("_LoginPartial")
+                    </div>
+                </div>
+            </nav>
+            <div class="container body-content">
+                @RenderBody()
+            </div>
+        </div>
+
+    </div>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap Js CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
