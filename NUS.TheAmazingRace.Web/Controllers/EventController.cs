@@ -6,11 +6,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 
 
 namespace NUS.TheAmazingRace.Web.Controllers
 {
-    [Authorize]
+    [Authorize(Roles ="Staff")]
+    [Authorize(Roles = "Admin")]
 
     public class EventController : Controller
     {
@@ -30,7 +32,8 @@ namespace NUS.TheAmazingRace.Web.Controllers
         [HttpPost]
         public ActionResult Index(Event eventModel)
         {
-           return View(eventBAL.EditEventList(eventModel));
+           string currentUser= User.Identity.GetUserName();
+           return View(eventBAL.EditEventList(eventModel,currentUser));
         }
 
 

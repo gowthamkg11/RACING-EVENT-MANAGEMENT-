@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNet.Identity;
 
 namespace NUS.TheAmagingRace.BAL
 {
@@ -17,7 +18,7 @@ namespace NUS.TheAmagingRace.BAL
             return db.Events.ToList(); ;
         }
 
-        public List<Event> EditEventList(Event eventModel)
+        public List<Event> EditEventList(Event eventModel,string currentUser)
         {
             if (eventModel.EventID > 0)
             {
@@ -30,11 +31,15 @@ namespace NUS.TheAmagingRace.BAL
                 editEvents.EndDate = eventModel.EndDate;
                 editEvents.TotalPitStops = eventModel.TotalPitStops;
                 editEvents.TotalTeams = eventModel.TotalTeams;
+                editEvents.LastModifiedBy = currentUser;
+                editEvents.LastModifiedAt = DateTime.Now;
                 db.SaveChanges();
             }
             else
             {
+                eventModel.CreatedBy = currentUser;
                 db.Events.Add(eventModel);
+                
                 db.SaveChanges();
             }
 
