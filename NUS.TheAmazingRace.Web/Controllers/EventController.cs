@@ -46,6 +46,12 @@ namespace NUS.TheAmazingRace.Web.Controllers
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
+        public ActionResult EventDetails(int eventId)
+        {
+
+            return PartialView("_EventDetails",eventBAL.GetSelectedEvent(eventId));
+        }
+
         public ActionResult EditEvent(int eventId)
         {
                         

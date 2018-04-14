@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NUS.TheAmagingRace.BAL
 {
-    public class EventBAL : IEventBAL
+    public class EventBAL
     {
         private TARDBContext db = new TARDBContext();
         private Event events = new Event();
@@ -57,6 +57,14 @@ namespace NUS.TheAmagingRace.BAL
 
         }
 
+        public Event GetSelectedEvent(int eventId)
+        {
+            Event currentEvent = db.Events.SingleOrDefault(x => x.EventID == eventId);
+            return currentEvent;
+
+        }
+
+
         public bool DeleteEventfromList(int eventId)
         {
             bool result = false;
@@ -66,5 +74,7 @@ namespace NUS.TheAmagingRace.BAL
             result = true;
             return result;
         }
+
+
     }
 }
