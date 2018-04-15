@@ -7,12 +7,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using PagedList;
 
 
 namespace NUS.TheAmazingRace.Web.Controllers
 {
-    [Authorize(Roles ="Staff")]
-    [Authorize(Roles = "Admin")]
+    [Authorize]
 
     public class EventController : Controller
     {
@@ -32,8 +32,15 @@ namespace NUS.TheAmazingRace.Web.Controllers
         [HttpPost]
         public ActionResult Index(Event eventModel)
         {
+            
            string currentUser= User.Identity.GetUserName();
            return View(eventBAL.EditEventList(eventModel,currentUser));
+        }
+
+        [HttpPost]
+        public ActionResult Search(string searchString)
+        {
+            return View("Index",eventBAL.SearchEvent(searchString));
         }
 
 
@@ -60,6 +67,12 @@ namespace NUS.TheAmazingRace.Web.Controllers
                         
             return PartialView("_EditEvent", eventBAL.GetEditingValues(eventId));
 
+        }
+
+        public JsonResult GetEvents(string search)
+        {
+
+            return Json(eventBAL.SearchEvent(search), JsonRequestBehavior.AllowGet);
         }
 
 

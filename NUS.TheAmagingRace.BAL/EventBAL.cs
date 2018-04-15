@@ -80,6 +80,17 @@ namespace NUS.TheAmagingRace.BAL
             return result;
         }
 
+        public List<Event> SearchEvent(string searchString)
+        {
+            var events = from s in db.Events
+                           select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                events = events.Where(s => s.EventName.Contains(searchString));
+            }
+            return events.ToList();
+        }
+
 
     }
 }
