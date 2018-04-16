@@ -36,12 +36,21 @@ namespace NUS.TheAmazingRace.Web.Controllers
         [HttpPost]
         public ActionResult Index(Event eventModel)
         {
-            
-           string currentUser= User.Identity.GetUserName();
+            string currentUser= User.Identity.GetUserName();
             eventManagement.Events = eventBAL.EditEventList(eventModel, currentUser);
             eventManagement.PitStops = pitStop;
-           return View(eventManagement);
+            return View(eventManagement);
         }
+
+        
+        public ActionResult LoadPitStops(int eventID)
+        {
+            eventManagement.PitStops=pitStopBAL.getPitStopOfEvent(eventID);
+            eventManagement.Events = eventBAL.GetEventList();
+
+            return View("Index",eventManagement);
+        }
+
 
         [HttpPost]
         public ActionResult Search(string searchString)

@@ -42,3 +42,9 @@ var ShowEvent = function (eventId) {
         $("#ModalShow").modal("show");
     })
 }
+
+var ShowPitstop = function (eventId) {
+    $("#loaderDiv").show();
+    alert("Before" + eventId);
+    var url = "/Event/LoadPitStops?EventID=?" + eventId;
+    }
