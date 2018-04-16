@@ -47,8 +47,8 @@ namespace NUS.TheAmagingRace.BAL
         {
             var pitstops = from s in db.PitStops
                          select s;
-
-            pitstops = pitstops.Where(s => s.Event.EventID==eventId);
+            pitstops = pitstops.Where(s => s.Event.EventID == eventId);
+            
             return pitstops.ToList();
         }
 

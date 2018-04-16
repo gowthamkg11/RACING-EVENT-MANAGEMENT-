@@ -12,17 +12,27 @@ namespace NUS.TheAmazingRace.Web.Controllers
     public class PitStopController : Controller
     {
         private PitStopBAL pitStopBAL = new PitStopBAL();
+        private EventBAL eventBAL = new EventBAL();
+        private EventManagement eventManagement = new EventManagement();
         // GET: PitStop
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult CreatePitStop(PitStop pitStop)
+        
+        public ActionResult CreatePitStop()
+        {
+           return PartialView("_CreatePitStop");
+        }
+
+        [HttpPost]
+        public ActionResult AddPitStop(PitStop pitStop)
         {
             String currentUser = User.Identity.GetUserName();
-            pitStopBAL.CreatePitStopList(pitStop, currentUser);
-            return PartialView();
+            eventManagement.PitStops = pitStopBAL.CreatePitStopList(pitStop, currentUser);
+            eventManagement.Events = eventBAL.GetEventList();
+            return View("~/Views/Event/Index.cshtml", eventManagement);
         }
     }
 }

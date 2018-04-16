@@ -1,15 +1,6 @@
-﻿var CreatePitStops = function () {
-    var url = "/PitStop/CreatePitStop";
-
-    $("#createPitStopModel").load(url, function () {
-        $("#ModalCreatePitStop").modal("show");
-    });
-};
-
-
-
-function AddPitStop() {
-    var url = "/PitStop/Index"
+﻿
+function CreatePitStop() {
+    var url = "/PitStop/AddPitStop";
 
     $("#loaderDiv").show();
     var formData = $("#addPitStop").serialize();
@@ -20,20 +11,20 @@ function AddPitStop() {
         data: formData,
         success: function () {
             $("#loaderDiv").hide();
-            $("#ModalCreatePitStop").modal("hide");
-            window.location.href = "/PitStop/Index";
+            $("#ModalAdd").modal("hide");
+            window.location.href = "/Event/Index";
         }
-    })
+    });
 }
 
 function pitStopLocate() {
     
         var latlng = new google.maps.LatLng(1.281766, 103.818346);
-        var mapOptions = {
-            center: latlng,
-            zoom: 13,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
+    var mapOptions = {
+        center: latlng,
+        zoom: 13,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
         var map = new google.maps.Map(document.getElementById("map"), mapOptions);
     var marker;
     var inputBox = new google.maps.places.SearchBox(document.getElementById('mapSearch'));

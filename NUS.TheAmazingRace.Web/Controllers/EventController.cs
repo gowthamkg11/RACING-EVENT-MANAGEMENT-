@@ -19,15 +19,18 @@ namespace NUS.TheAmazingRace.Web.Controllers
        
         private EventBAL eventBAL = new EventBAL();
         private PitStopBAL pitStopBAL = new PitStopBAL();
-        private EventManagement eventManagement = new EventManagement();
+        private EventManagement eventManagement;
         private List<PitStop> pitStop = new List<PitStop>();
 
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult Index(int eventId=0)
         {
+            eventManagement = new EventManagement();
             List<Event> events = eventBAL.GetEventList();
-            List<PitStop> pitStops = pitStopBAL.GetPitStopList();
-            eventManagement.PitStops = pitStop;
+            List<PitStop> pitStops = pitStopBAL.getPitStopOfEvent(eventId);
+            
+                eventManagement.PitStops = pitStops;
+            
             eventManagement.Events = events;
             return View(eventManagement);
         }
@@ -36,6 +39,7 @@ namespace NUS.TheAmazingRace.Web.Controllers
         [HttpPost]
         public ActionResult Index(Event eventModel)
         {
+            eventManagement = new EventManagement();
             string currentUser= User.Identity.GetUserName();
             eventManagement.Events = eventBAL.EditEventList(eventModel, currentUser);
             eventManagement.PitStops = pitStop;
@@ -43,13 +47,13 @@ namespace NUS.TheAmazingRace.Web.Controllers
         }
 
         
-        public ActionResult LoadPitStops(int eventID)
-        {
-            eventManagement.PitStops=pitStopBAL.getPitStopOfEvent(eventID);
-            eventManagement.Events = eventBAL.GetEventList();
+        //public ActionResult LoadPitStops(int eventID)
+        //{
+        //    eventManagement.PitStops=pitStopBAL.getPitStopOfEvent(eventID);
+        //    eventManagement.Events = eventBAL.GetEventList();
 
-            return View("Index",eventManagement);
-        }
+        //    return View("Index",eventManagement);
+        //}
 
 
         [HttpPost]
