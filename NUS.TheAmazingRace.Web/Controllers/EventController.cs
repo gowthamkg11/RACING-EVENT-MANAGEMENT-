@@ -7,7 +7,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
-using PagedList;
 
 
 namespace NUS.TheAmazingRace.Web.Controllers
@@ -19,13 +18,18 @@ namespace NUS.TheAmazingRace.Web.Controllers
       
        
         private EventBAL eventBAL = new EventBAL();
-
-
+        private PitStopBAL pitStopBAL = new PitStopBAL();
+        private EventManagement eventManagement = new EventManagement();
+        private List<PitStop> pitStop = new List<PitStop>();
 
         [HttpGet]
         public ActionResult Index()
         {
-            return View(eventBAL.GetEventList());
+            List<Event> events = eventBAL.GetEventList();
+            List<PitStop> pitStops = pitStopBAL.GetPitStopList();
+            eventManagement.PitStops = pitStop;
+            eventManagement.Events = events;
+            return View(eventManagement);
         }
 
 
@@ -34,7 +38,9 @@ namespace NUS.TheAmazingRace.Web.Controllers
         {
             
            string currentUser= User.Identity.GetUserName();
-           return View(eventBAL.EditEventList(eventModel,currentUser));
+            eventManagement.Events = eventBAL.EditEventList(eventModel, currentUser);
+            eventManagement.PitStops = pitStop;
+           return View(eventManagement);
         }
 
         [HttpPost]

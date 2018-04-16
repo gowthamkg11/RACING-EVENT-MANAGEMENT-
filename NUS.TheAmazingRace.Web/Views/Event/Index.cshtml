@@ -1,15 +1,15 @@
-﻿@model IEnumerable<NUS.TheAmagingRace.DAL.Event>
+﻿@model NUS.TheAmagingRace.DAL.EventManagement
 
 @{
     Layout = "~/Views/Shared/_StaffLayout.cshtml";
     ViewBag.Title = "Index";
 }
 
-
+<script src="~/Scripts/Custom/EventManagement.js"></script>
 
 <div class="row">
     <div id="EventListWrapper" class="col-lg-3">
-
+        
 
         <p>
             <a href="#" class="btn btn-success" onclick="AddEvent()">Create</a>
@@ -25,11 +25,11 @@
 
 
 
-        @if (Model.Count() > 0)
+        @if (Model.Events.Count() > 0)
         {
 
 
-            foreach (var v in Model)
+            foreach (var v in Model.Events)
             {
 
 
@@ -70,12 +70,7 @@
 
             }
 
-
-
-
-
             <input type="hidden" id="hiddenEventId" />
-
 
         }
         else
@@ -89,169 +84,169 @@
         }
 
     </div>
-    <div id="EventDetailsWrapper" class="col-lg-9">
-
-        <div id="exTab3" class="container">
-            <ul class="nav nav-pills">
-                <li class="active">
-                    <a href="#1b" data-toggle="tab">PitStops</a>
-                </li>
-                <li>
-                    <a href="#2b" data-toggle="tab">Teams</a>
-                </li>
-
-
-            </ul>
-
-            <div class="tab-content clearfix">
-                <div class="tab-pane active" id="1b">
-                    <h3>Same as example 1 but we have now styled the tab's corner</h3>
-                </div>
-                <div class="tab-pane" id="2b">
-                    <h3>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab</h3>
-                </div>
-
-            </div>
-        </div>
-
-
-
-    </div>
-</div>
-
-
-<div class="modal fade" id="myModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-
-
-            <div class="modal-header">
-                <a href="#" class="close" data-dismiss="modal">&times;</a>
-                <h3 class="modal-title">Delete Event</h3>
-
-            </div>
-
-            <div class="modal-body">
-                <h4>Are you sure to delete this?</h4>
-
-                <div style="text-align:center;display:none" id="loaderDiv">
-                    <img src="~/Content/Images/InternetSlowdown_Day.gif" width="150" />
-                </div>
-            </div>
-            <div class="modal-footer">
-                <a href="#" class="btn btn-default" data-dismiss="modal">cancel</a>
-                <a href="#" class="btn btn-success" onclick="DeleteEvent()">Confirm</a>
-
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="ModalEdit">
-    <div class="modal-dialog">
-        <div class="modal-content">
-
-
-            <div class="modal-header">
-                <a href="#" class="close" data-dismiss="modal">&times;</a>
-                <h3 class="modal-title">Edit Event</h3>
-
-            </div>
-
-            <div class="modal-body" id="ModalBodyEdit">
-
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="ModalAdd">
-    <div class="modal-dialog">
-        <div class="modal-content">
-
-
-            <div class="modal-header">
-                <a href="#" class="close" data-dismiss="modal">&times;</a>
-                <h3 class="modal-title">Create Event</h3>
-
-            </div>
-
-            <div class="modal-body" id="ModalBodyAdd">
-
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="ModalShow">
-    <div class="modal-dialog">
-        <div class="modal-content">
-
-
-            <div class="modal-header">
-                <a href="#" class="close" data-dismiss="modal">&times;</a>
-                <h3 class="modal-title">Event Details</h3>
-
-            </div>
-
-            <div class="modal-body" id="ModalBodyShow">
-
-            </div>
-
-        </div>
-    </div>
-</div>
-
-
-<script>
-    var ConfirmDelete = function (eventId) {
-        $("#hiddenEventId").val(eventId)
-        $("#myModal").modal('show');
-
-    }
-
-    var DeleteEvent = function () {
-        $("#loaderDiv").show();
-        var eventId = $("#hiddenEventId").val();
-        $.ajax({
-            type: "POST",
-            url: '@Url.Action("DeleteEvent","Event")',
-            data: { EventId: eventId },
-            success: function (result) {
-                $("#loaderDiv").hide();
-                $("#myModal").modal('hide');
-                $("#EventCard_" + eventId).remove();
-            }
-
-        })
-    }
-    var EditEvent = function (eventId) {
-        var url = "/Event/EditEvent?EventID=" + eventId;
-
-        $("#ModalBodyEdit").load(url, function () {
-            $("#ModalEdit").modal("show");
-        })
-    }
-
-    var AddEvent = function () {
-        var url = "/Event/CreateEvent";
-
-        $("#ModalBodyAdd").load(url, function () {
-            $("#ModalAdd").modal("show");
-        })
-    }
-
-    var ShowEvent = function (eventId) {
-        var url = "/Event/EventDetails?EventID=" + eventId;
-
-        $("#ModalBodyShow").load(url, function () {
-            $("#ModalShow").modal("show");
-        })
-            }
-
     
-</script>
+        <div id="EventDetailsWrapper" class="col-lg-9">
+
+            <div id="exTab3" class="container">
+                <ul class="nav nav-pills">
+                    <li class="active">
+                        <a href="#1b" data-toggle="tab">PitStops</a>
+                    </li>
+                    <li>
+                        <a href="#2b" data-toggle="tab">Teams</a>
+                    </li>
+
+
+                </ul>
+
+                <div class="tab-content clearfix">
+                    <a href="#" class="btn btn-success" onclick="AddEvent()">Create</a>
+                    <div class="tab-pane active" id="1b">
+                        <div class="row">
+
+
+                            @if (Model.PitStops.Count() > 0)
+            {
+                foreach (var v in Model.PitStops)
+                {
+                    var PitId = "PitStopCard_" + v.PitStopID;
+                    <div class="col-lg-4">
+                        <div class="card" style="width: 18rem;" id='@PitId.ToString()'>
+                            <div class="card-content">
+                                <div class="card-header">
+                                    <div class="card-heading">
+                                        <div style="float:right">
+                                            <a href="#" class="glyphicon glyphicon-pencil" onclick="EditPitStop(@v.PitStopID)"></a>&nbsp;
+                                        </div>
+                                        <h5 align="center"><strong>@v.PitStopName</strong> </h5>
+                                    </div>
+
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-p">
+                                        <i>@v.Address</i><br />
+                                    </p>
+                                </div>
+
+                                <div class="card-footer">
+                                    <strong>Last modified by : </strong>@v.LastModifiedBy
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+}
+                <input type="hidden" id="hiddenEventId" />
+                <div class="col-lg-8">
+                    <div class="col-lg-8" id="map" style="width:400px;height:200px;background:yellow"></div>
+                </div>
+}
+else
+{
+                <div class="NorecordFound">
+                    <br />
+                    
+                    <p> Select an event to view Pit stops</p>
+                </div>
+}
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="2b">
+                        <h3>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab</h3>
+                    </div>
+
+                </div>
+                </div>
+
+
+
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+
+                <div class="modal-header">
+                    <a href="#" class="close" data-dismiss="modal">&times;</a>
+                    <h3 class="modal-title">Delete Event</h3>
+
+                </div>
+
+                <div class="modal-body">
+                    <h4>Are you sure to delete this?</h4>
+
+                    <div style="text-align:center;display:none" id="loaderDiv">
+                        <img src="~/Content/Images/InternetSlowdown_Day.gif" width="150" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-default" data-dismiss="modal">cancel</a>
+                    <a href="#" class="btn btn-success" onclick="DeleteEvent()">Confirm</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ModalEdit">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+
+                <div class="modal-header">
+                    <a href="#" class="close" data-dismiss="modal">&times;</a>
+                    <h3 class="modal-title">Edit Event</h3>
+
+                </div>
+
+                <div class="modal-body" id="ModalBodyEdit">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ModalAdd">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+
+                <div class="modal-header">
+                    <a href="#" class="close" data-dismiss="modal">&times;</a>
+                    <h3 class="modal-title">Create Event</h3>
+
+                </div>
+
+                <div class="modal-body" id="ModalBodyAdd">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ModalShow">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+
+                <div class="modal-header">
+                    <a href="#" class="close" data-dismiss="modal">&times;</a>
+                    <h3 class="modal-title">Event Details</h3>
+
+                </div>
+
+                <div class="modal-body" id="ModalBodyShow">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 
 
 
