@@ -46,16 +46,22 @@ var ShowEvent = function (eventId) {
 var ShowPitstop = function (eventId) {
     $("#loaderDiv").show();
     alert("Before" + eventId);
-    var url = "/Event/Index";
+    var url = "/Pitstop/Index";
+   
     $.ajax({
         type: "GET",
         url: url,
         data: { EventId: eventId },
-        success: function (result) {
+        
+        success: function (Data) {
             alert("success");
+            
+            $("#LoadingPitStop").html(Data);
         }
+        
 
     });
+    
 };
 
 var AddPitStop = function () {
