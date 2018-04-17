@@ -15,24 +15,32 @@ namespace NUS.TheAmazingRace.Web.Controllers
         private EventBAL eventBAL = new EventBAL();
         private EventManagement eventManagement = new EventManagement();
         // GET: PitStop
-        public ActionResult Index()
+        public ActionResult Index(int EventID=0)
         {
-            return View();
+          
+                return PartialView("_Index", pitStopBAL.getPitStopOfEvent(EventID));
+            
+          
         }
 
-        
+        public JsonResult GetPitStopData(int EventID)
+        {
+
+            return Json(pitStopBAL.getPitStopOfEvent(EventID),JsonRequestBehavior.AllowGet);
+        }
+
         public ActionResult CreatePitStop()
         {
            return PartialView("_CreatePitStop");
         }
 
-        [HttpPost]
-        public ActionResult AddPitStop(PitStop pitStop)
-        {
-            String currentUser = User.Identity.GetUserName();
-            eventManagement.PitStops = pitStopBAL.CreatePitStopList(pitStop, currentUser);
-            eventManagement.Events = eventBAL.GetEventList();
-            return View("~/Views/Event/Index.cshtml", eventManagement);
-        }
+        //[HttpPost]
+        //public ActionResult AddPitStop(PitStop pitStop)
+        //{
+        //    String currentUser = User.Identity.GetUserName();
+        //    eventManagement.PitStops = pitStopBAL.CreatePitStopList(pitStop, currentUser);
+        //    eventManagement.Events = eventBAL.GetEventList();
+        //    return View("~/Views/Event/Index.cshtml", eventManagement);
+        //}
     }
 }
