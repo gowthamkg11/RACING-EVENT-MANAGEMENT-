@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="EventBAL.cs" />
     <Compile Include="IEventBAL.cs" />
+    <Compile Include="PitStopBAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

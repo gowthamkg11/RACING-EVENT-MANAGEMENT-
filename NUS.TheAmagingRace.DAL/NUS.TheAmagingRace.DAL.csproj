@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
     <Compile Include="Event.cs" />
+    <Compile Include="EventManagement.cs" />
     <Compile Include="IAuditedEntity.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="PitStop.cs" />
