@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AutoMapper;
+using NUS.TheAmazingRace.Web.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,7 +21,15 @@ namespace NUS.TheAmazingRace.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-          
+            TARMapperConfiguration.Initialize();
+
+
+        }
+        protected void Application_Error(object sender, EventArgs e)
+        {
+            Exception exception = Server.GetLastError();
+            Server.ClearError();
+            Response.Redirect("Error.html");
         }
     }
 }

@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>@ViewBag.Title - The Amaging Race</title>
+    <title>@ViewBag.Title - The Amazing Race</title>
     @Styles.Render("~/Content/css")
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
 
-
+    @Scripts.Render("~/bundles/jquery")
     @*@Scripts.Render("~/bundles/modernizr")*@
 
 </head>
@@ -26,7 +26,7 @@
 
             <ul class="list-unstyled components">
                 <li class="active">
-                    <a href=" @Url.Action("Index","Home")">
+                    <a href=" @Url.Action("Index","DashBoard")">
                         <i class="glyphicon glyphicon-home"></i>
                         Home
                     </a>
@@ -54,7 +54,7 @@
 
                         </button>
 
-                        @Html.ActionLink("The Amaging Race", "Index", "Home", null, new { @class = "navbar-brand" })
+                        @Html.ActionLink("The Amazing Race", "Index", "Home", null, new { @class = "navbar-brand" })
 
                     </div>
                     <div class="navbar-collapse collapse">

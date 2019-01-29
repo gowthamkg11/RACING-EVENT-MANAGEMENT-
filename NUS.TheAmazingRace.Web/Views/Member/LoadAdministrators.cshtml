@@ -1,0 +1,61 @@
+﻿@model IEnumerable<NUS.TheAmagingRace.BusinessModels.TARUserViewModel>
+<table class="table">
+    <tr>
+        @*<th>
+                @Html.DisplayNameFor(model => model.ImagePath)
+            </th>*@
+        <th> </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>*@
+
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.DisplayName)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <img src="@Url.Content(item.ImagePath)" width="50" height="50" alt="dumy" />
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.DisplayName)
+            </td>
+
+            <td>
+                <a class="btn btn-success" id="btnRemovetoAdmin" onclick="RemoveasAdmin('@item.Id')">Remove as Admin</a>
+              
+            </td>
+        </tr>
+    }
+</table>
+
+<script>
+    function RemoveasAdmin(c) {
+        var url = '@Url.Action("RemoveasAdmin", "Member")';
+
+        $("#loaderDiv").show();
+        var formData = { userID: c };
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: formData,
+            success: function (data, status, StatusCode) {
+                $("#loaderDiv").hide();
+                window.location.href = '@Url.Action("Index","Member")';
+            },
+
+        });
+    }
+    </script>

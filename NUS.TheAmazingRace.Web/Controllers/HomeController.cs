@@ -6,6 +6,11 @@ using System.Web.Mvc;
 
 namespace NUS.TheAmazingRace.Web.Controllers
 {
+
+    /*<summary>
+		 This method is used to Show the Home screen of the event
+	</summary>*/
+
     public class HomeController : Controller
     {
         public ActionResult Index()

@@ -1,54 +1,85 @@
 ﻿@model IEnumerable<NUS.TheAmagingRace.DAL.PitStop>
 
 
+@Scripts.Render("~/bundles/jqueryval")
+<script src="~/Scripts/Custom/EventManagement.js"></script>
+<script src="~/Scripts/Custom/PitStop.js"></script>
+<link href="~/Assets/css/scrollBar.css" rel="stylesheet" />
 
-@if (Model.Count() > 0)
+@if (Model.Count() >= 0)
 {
-    <a href="#" class="btn btn-success" onclick="AddPitStop()">Create</a>
-    <div class="row">
-        <div id="PitstopLoad">
-            @foreach (var v in Model)
-        {
-            var PitId = "PitStopCard_" + v.PitStopID;
-            <div class="col-lg-4">
-                <div class="card" style="width: 18rem;" id='@PitId.ToString()'>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <div class="card-heading">
-                                <div style="float:right">
-                                    <a href="#" class="glyphicon glyphicon-pencil" onclick="EditPitStop(@v.PitStopID)"></a>&nbsp;
+    <div id="eventIdDiv">
+        <input type="hidden" id="eventId" value="" />
+    </div>
+    <div id="refresh">
+        <a href="#" class="btn btn-success" onclick="AddPitStop()">Create</a>
+        <div class="row">
+            <div id="PitstopLoad">
+
+                <div class="col-lg-4" id="style-3" style="max-height:475px; overflow:auto">
+                    @foreach (var v in Model)
+                    {
+                        var PitId = "PitStopCard_" + v.PitStopID;
+                        <div class="card" style="width: 22rem; height: 9rem" id='@PitId.ToString()'>
+
+                            <div class="card-content">
+                                <div class="card-header">
+                                    <div class="card-heading">
+                                        <div style="float:right">
+                                            <a href="#" class="glyphicon glyphicon-pencil" onclick="EditPitStop(@v.PitStopID)"></a>&nbsp;
+                                            <a href="#" class="glyphicon glyphicon-eye-open" onclick="VewPitstop(@v.PitStopID)"></a>&nbsp;
+                                            <a href="#" class="glyphicon glyphicon-trash" onclick="deletePitStop(@v.PitStopID)"></a>&nbsp;
+                                        </div>
+                                        <h5 style="padding-left:30px"><strong>@v.SequenceNumber.@v.PitStopName</strong> </h5>
+                                    </div>
                                 </div>
-                                <h5 align="center"><strong>@v.PitStopName</strong> </h5>
+
+                                <div class="card-body" style="height:30px">
+                                    <p class="card-p">
+                                        <i>@v.Address</i><br />
+                                    </p>
+                                </div>
+
+                                <div class="card-footer">
+                                    <strong>Last modified by : </strong>@v.LastModifiedBy
+                                </div>
                             </div>
-
                         </div>
-                        <div class="card-body">
-                            <p class="card-p">
-                                <i>@v.Address</i><br />
-                            </p>
-                        </div>
-
-                        <div class="card-footer">
-                            <strong>Last modified by : </strong>@v.LastModifiedBy
-                        </div>
-
-                    </div>
+                    }
+                    <input type="hidden" id="hiddenEventId" />
                 </div>
-            </div>
-    }
-            <input type="hidden" id="hiddenEventId" />
-            <div class="col-lg-8">
-                <div class="col-lg-8" id="map" style="width:400px;height:200px;background:yellow"></div>
+
+                <div class="col-lg-8">
+                    @if (Model.Count() > 0)
+                    {
+                        <div class="col-lg-8" id="mainMap" style="width:500px;height:469px;background:white"></div>
+                    }
+                    else
+                    {
+                        <div>
+                            No PitStop to display,
+                            Click create to add Pitstop
+                            <br />
+                            <br />
+                        </div>
+                    }
+                </div>
             </div>
         </div>
     </div>
-        }
-        else
-        {
-        <div class="NorecordFound">
-            <br />
+}
+else
+{
+    <div class="NorecordFound">
+        <br />
+        <p> Select an event to view Pit stops</p>
+    </div>
+}
 
-            <p> Select an event to view Pit stops</p>
-        </div>
-        }
-   
+<input type="hidden" id="hiddenPitStopId" />
+
+<script>
+    $(document).ready(function () {
+        allPitStops();
+    });
+</script>

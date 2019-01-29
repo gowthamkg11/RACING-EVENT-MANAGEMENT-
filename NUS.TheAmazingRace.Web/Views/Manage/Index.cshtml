@@ -1,9 +1,11 @@
 ﻿@model NUS.TheAmazingRace.Web.Models.IndexViewModel
+@using NUS.TheAmagingRace.DAL.Extensions
 @{
     ViewBag.Title = "Manage";
 }
 
-<h2>@ViewBag.Title.</h2>
+
+<h2>@ViewBag.Title</h2>
 
 <p class="text-success">@ViewBag.StatusMessage</p>
 <div>
@@ -30,13 +32,13 @@
         </dd>
         @*
             Phone Numbers can used as a second factor of verification in a two-factor authentication system.
-             
+
              See <a href="https://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
                 for details on setting up this ASP.NET application to support two-factor authentication using SMS.
-             
+
              Uncomment the following block after you have set up two-factor authentication
         *@
-        @*  
+        @*
             <dt>Phone Number:</dt>
             <dd>
                 @(Model.PhoneNumber ?? "None")
@@ -56,7 +58,7 @@
                 }
             </dd>
         *@
-        <dt>Two-Factor Authentication:</dt>
+        <dt>Two-Factor Auth :</dt>
         <dd>
             <p>
                 There are no two-factor authentication providers configured. See <a href="https://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
@@ -83,5 +85,42 @@
                     }
                 }*@
         </dd>
+        <dt>Account Settings :</dt>
+        <dd> <button class="btn btn-success" onclick="ChangePic()">Edit profile  </button> </dd>
+
+
     </dl>
+
 </div>
+<div class="modal fade" id="ModalChange">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h3 class="modal-title">Edit Profile</h3>
+
+            </div>
+
+            <div class="modal-body" id="ModalBodyChange">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        //Check if the current URL contains '#'
+        if (document.URL.indexOf("#") == -1) {
+            // Set the URL to whatever it was plus "#".
+            url = document.URL + "#";
+            location = "#";
+
+            //Reload the page
+            location.reload(true);
+        }
+    });
+</script>
+

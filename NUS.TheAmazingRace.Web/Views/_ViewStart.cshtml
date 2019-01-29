@@ -1,5 +1,7 @@
 ﻿@{
-
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAq4SF_X7t3D-eK_vugp3_o4coM6EqwPbM"></script>
+    <script>src = "http://maps.googleapis.com/maps/api/distancematrix?key=AIzaSyCHwkY8Aqh03CrrD_4JJ7bUJBjVazJlSFI"</script>
     if (this.User.IsInRole("Admin"))
     {
         Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -21,3 +23,18 @@
 
 
 }
+
+
+<div class="modal fade" id="FailureModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h3 class="modal-title" align="center">Failure</h3>
+            </div>
+            <div class="modal-body" id="FailureModalBody">
+
+            </div>
+        </div>
+    </div>
+</div>

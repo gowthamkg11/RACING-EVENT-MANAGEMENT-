@@ -45,6 +45,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,22 +55,61 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
+    <Compile Include="ApiLocation.cs" />
+    <Compile Include="Member.cs" />
+    <Compile Include="Migrations\201804280216336_NEWUpadate.cs" />
+    <Compile Include="Migrations\201804280216336_NEWUpadate.Designer.cs">
+      <DependentUpon>201804280216336_NEWUpadate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805011313180_migrationName.cs" />
+    <Compile Include="Migrations\201805011313180_migrationName.Designer.cs">
+      <DependentUpon>201805011313180_migrationName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805011429577_migrationMember.cs" />
+    <Compile Include="Migrations\201805011429577_migrationMember.Designer.cs">
+      <DependentUpon>201805011429577_migrationMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805021212355_newName.cs" />
+    <Compile Include="Migrations\201805021212355_newName.Designer.cs">
+      <DependentUpon>201805021212355_newName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="StaffLocation.cs" />
+    <Compile Include="TeamLocation.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="EventManagement.cs" />
+    <Compile Include="Extensions\IdentityExtensions.cs" />
     <Compile Include="IAuditedEntity.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="PitStop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporsitory\GenericRepository.cs" />
+    <Compile Include="Reporsitory\TeamRepository.cs" />
     <Compile Include="TARDBContext.cs" />
     <Compile Include="TARUser.cs" />
     <Compile Include="Team.cs" />
     <Compile Include="TestDataInitializer.cs" />
+    <Compile Include="UnitOfWork\UOW.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201804280216336_NEWUpadate.resx">
+      <DependentUpon>201804280216336_NEWUpadate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805011313180_migrationName.resx">
+      <DependentUpon>201805011313180_migrationName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805011429577_migrationMember.resx">
+      <DependentUpon>201805011429577_migrationMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805021212355_newName.resx">
+      <DependentUpon>201805021212355_newName.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

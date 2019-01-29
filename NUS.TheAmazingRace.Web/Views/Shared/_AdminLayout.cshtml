@@ -5,12 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>@ViewBag.Title - The Amaging Race</title>
+    <title>@ViewBag.Title - The Amazing Race</title>
     @Styles.Render("~/Content/css")
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
 
 
+    @Scripts.Render("~/bundles/jquery")
     @*@Scripts.Render("~/bundles/modernizr")*@
 
 </head>
@@ -26,31 +27,26 @@
 
             <ul class="list-unstyled components">
                 <li class="active">
-                    <a href=" @Url.Action("Index","Home")">
+                    <a href=" @Url.Action("Index","DashBoard")">
                         <i class="glyphicon glyphicon-home"></i>
                         Home
                     </a>
 
                 </li>
-                <li>
+                <li id="eventsidebarli">
                     <a href=" @Url.Action("Index","Event")">
                         <i class="glyphicon glyphicon-briefcase"></i>
                         Event Management
                     </a>
 
                 </li>
-                <li>
-                    <a href="#">
+                <li id="membersidebarli">
+                    <a href=" @Url.Action("Index","Member")">
                         <i class="glyphicon glyphicon-link"></i>
                         Member Management
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <i class="glyphicon glyphicon-wrench"></i>
-                        PitStop Check in
-                    </a>
-                </li>
+         
 
             </ul>
 
@@ -68,7 +64,7 @@
                                     <i class="glyphicon glyphicon-align-left"></i>
                                 </button>
                             </div>
-                            <div class="col col-lg-10"> @Html.ActionLink("The Amaging Race", "Index", "Home", null, new { @class = "navbar-brand" })</div>
+                            <div class="col col-lg-10"> @Html.ActionLink("The Amazing Race", "Index", "Home", null, new { @class = "navbar-brand" })</div>
                            
                         </div>
                     </div>
@@ -91,9 +87,25 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
+            if (window.location.href.indexOf('@Url.Action("Index", "Event")') > 0) {
+                $("#sidebar ul > li").removeClass('active');
+                  $("#eventsidebarli").addClass('active');
+            }
+             if (window.location.href.indexOf('@Url.Action("Index", "Member")') > 0) {
+                $("#sidebar ul > li").removeClass('active');
+                 $("#membersidebarli").addClass('active');
+                }
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
             });
+            $("#sidebar ul > li").on('click', function (e) {
+                //debugger;
+
+              
+                $("#sidebar ul > li").removeClass('active');
+                $(e.currentTarget).addClass('active');
+            })
+         
         });
     </script>
 

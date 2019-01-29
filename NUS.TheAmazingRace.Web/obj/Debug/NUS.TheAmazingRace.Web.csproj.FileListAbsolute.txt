@@ -270,150 +270,287 @@ D:\Study\Semester 2\Electives\Enterprise.net\theamazingrace\The-Amaging-Race\NUS
 D:\Study\Semester 2\Electives\Enterprise.net\theamazingrace\The-Amaging-Race\NUS.TheAmazingRace.Web\obj\Debug\NUS.TheAmazingRace.Web.csproj.CopyComplete
 D:\Study\Semester 2\Electives\Enterprise.net\theamazingrace\The-Amaging-Race\NUS.TheAmazingRace.Web\obj\Debug\NUS.TheAmazingRace.Web.dll
 D:\Study\Semester 2\Electives\Enterprise.net\theamazingrace\The-Amaging-Race\NUS.TheAmazingRace.Web\obj\Debug\NUS.TheAmazingRace.Web.pdb
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\obj\Debug\NUS.TheAmazingRace.Web.csprojResolveAssemblyReference.cache
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\obj\Debug\NUS.TheAmazingRace.Web.csproj.CoreCompileInputs.cache
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\obj\Debug\NUS.TheAmazingRace.Web.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\obj\Debug\NUS.TheAmazingRace.Web.pdb
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\NUS.TheAmazingRace.Web.dll.config
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\NUS.TheAmazingRace.Web.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\NUS.TheAmazingRace.Web.pdb
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\csc.exe
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\csc.exe.config
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\csc.rsp
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\csi.exe
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\csi.exe.config
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\csi.rsp
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.AppContext.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Console.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Diagnostics.Process.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.IO.Compression.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.IO.Pipes.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Security.AccessControl.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Security.Claims.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Security.Principal.Windows.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Threading.Thread.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.ValueTuple.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Xml.XPath.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\vbc.exe
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\vbc.exe.config
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\vbc.rsp
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\VBCSCompiler.exe
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Antlr3.Runtime.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\CommonServiceLocator.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\EntityFramework.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\EntityFramework.SqlServer.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AI.Agent.Intercept.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AI.DependencyCollector.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AI.PerfCounterCollector.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AI.Web.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AI.WindowsServer.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.ApplicationInsights.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Newtonsoft.Json.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\NUS.TheAmagingRace.BAL.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\NUS.TheAmagingRace.DAL.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Owin.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Net.Http.Formatting.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Helpers.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Http.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Http.WebHost.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Mvc.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Optimization.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Razor.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.WebPages.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.WebPages.Razor.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.Abstractions.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.Configuration.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.Container.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.Interception.Configuration.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.Interception.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.RegistrationByConvention.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.ServiceLocation.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\WebGrease.dll
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\NUS.TheAmagingRace.BAL.pdb
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\NUS.TheAmagingRace.BAL.dll.config
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\NUS.TheAmagingRace.DAL.pdb
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\NUS.TheAmagingRace.DAL.dll.config
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\CommonServiceLocator.pdb
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Helpers.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Mvc.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Optimization.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Razor.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.WebPages.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.WebPages.Razor.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.Abstractions.pdb
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.Configuration.pdb
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.Container.pdb
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.Interception.pdb
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.Interception.Configuration.pdb
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.RegistrationByConvention.pdb
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.ServiceLocation.pdb
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Antlr3.Runtime.pdb
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Newtonsoft.Json.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Net.Http.Formatting.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Http.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Http.WebHost.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\EntityFramework.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\EntityFramework.SqlServer.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.ApplicationInsights.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AI.DependencyCollector.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AI.WindowsServer.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AI.Web.xml
-C:\Users\Gowtham\The-Amaging-Race\NUS.TheAmazingRace.Web\obj\Debug\NUS.TheAmazingRace.Web.csproj.CopyComplete
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\NUS.TheAmazingRace.Web.dll.config
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\NUS.TheAmazingRace.Web.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\NUS.TheAmazingRace.Web.pdb
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\csc.exe
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\csc.exe.config
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\csc.rsp
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\csi.exe
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\csi.exe.config
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\csi.rsp
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.AppContext.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Collections.Immutable.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Console.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Diagnostics.Process.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.IO.Compression.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.IO.FileSystem.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.IO.Pipes.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Security.AccessControl.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Security.Claims.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Security.Principal.Windows.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Threading.Thread.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.ValueTuple.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Xml.XmlDocument.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Xml.XPath.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\vbc.exe
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\vbc.exe.config
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\vbc.rsp
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\VBCSCompiler.exe
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\roslyn\VBCSCompiler.exe.config
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Win32.Primitives.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\netstandard.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.AppContext.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Collections.Concurrent.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Collections.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Collections.NonGeneric.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Collections.Specialized.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.ComponentModel.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.ComponentModel.EventBasedAsync.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.ComponentModel.Primitives.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.ComponentModel.TypeConverter.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Console.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Data.Common.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Diagnostics.Contracts.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Diagnostics.Debug.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Diagnostics.FileVersionInfo.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Diagnostics.Process.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Diagnostics.StackTrace.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Diagnostics.TextWriterTraceListener.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Diagnostics.Tools.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Diagnostics.TraceSource.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Diagnostics.Tracing.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Drawing.Primitives.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Dynamic.Runtime.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Globalization.Calendars.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Globalization.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Globalization.Extensions.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.IO.Compression.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.IO.Compression.ZipFile.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.IO.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.IO.FileSystem.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.IO.FileSystem.DriveInfo.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.IO.FileSystem.Primitives.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.IO.FileSystem.Watcher.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.IO.IsolatedStorage.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.IO.MemoryMappedFiles.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.IO.Pipes.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.IO.UnmanagedMemoryStream.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Linq.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Linq.Expressions.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Linq.Parallel.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Linq.Queryable.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Net.Http.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Net.NameResolution.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Net.NetworkInformation.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Net.Ping.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Net.Primitives.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Net.Requests.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Net.Security.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Net.Sockets.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Net.WebHeaderCollection.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Net.WebSockets.Client.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Net.WebSockets.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.ObjectModel.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Reflection.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Reflection.Extensions.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Reflection.Primitives.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Resources.Reader.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Resources.ResourceManager.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Resources.Writer.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Runtime.CompilerServices.VisualC.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Runtime.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Runtime.Extensions.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Runtime.Handles.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Runtime.InteropServices.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Runtime.Numerics.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Runtime.Serialization.Formatters.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Runtime.Serialization.Json.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Runtime.Serialization.Primitives.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Runtime.Serialization.Xml.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Security.Claims.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Security.Cryptography.Algorithms.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Security.Cryptography.Csp.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Security.Cryptography.Encoding.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Security.Cryptography.Primitives.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Security.Cryptography.X509Certificates.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Security.Principal.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Security.SecureString.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Text.Encoding.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Text.Encoding.Extensions.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Text.RegularExpressions.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Threading.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Threading.Overlapped.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Threading.Tasks.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Threading.Tasks.Parallel.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Threading.Thread.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Threading.ThreadPool.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Threading.Timer.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.ValueTuple.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Xml.ReaderWriter.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Xml.XDocument.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Xml.XmlDocument.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Xml.XmlSerializer.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Xml.XPath.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Xml.XPath.XDocument.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Antlr3.Runtime.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\AutoMapper.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\CommonServiceLocator.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\EntityFramework.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\EntityFramework.SqlServer.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AI.Agent.Intercept.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AI.DependencyCollector.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AI.Web.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AI.WindowsServer.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.ApplicationInsights.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AspNet.Identity.Core.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.EntityFrameworkCore.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.EntityFrameworkCore.Relational.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Extensions.Caching.Abstractions.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Extensions.Caching.Memory.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Extensions.DependencyInjection.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Extensions.Logging.Abstractions.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Extensions.Logging.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Extensions.Options.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Extensions.Primitives.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.Cookies.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.Facebook.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.Google.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.OAuth.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.Twitter.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Newtonsoft.Json.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\NUS.TheAmagingRace.BAL.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\NUS.TheAmagingRace.BusinessModels.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\NUS.TheAmagingRace.DAL.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Owin.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Remotion.Linq.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Collections.Immutable.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.ComponentModel.Annotations.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Diagnostics.DiagnosticSource.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Interactive.Async.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Net.Http.Formatting.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Helpers.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Http.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Http.WebHost.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Mvc.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Optimization.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Razor.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.WebPages.Deployment.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.WebPages.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.WebPages.Razor.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.Abstractions.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.Configuration.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.Container.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.Interception.Configuration.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.Interception.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.RegistrationByConvention.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.ServiceLocation.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\WebGrease.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\NUS.TheAmagingRace.BusinessModels.pdb
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\NUS.TheAmagingRace.BAL.pdb
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\NUS.TheAmagingRace.BAL.dll.config
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\NUS.TheAmagingRace.DAL.pdb
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\NUS.TheAmagingRace.DAL.dll.config
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\AutoMapper.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\CommonServiceLocator.pdb
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\EntityFramework.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\EntityFramework.SqlServer.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.EntityFrameworkCore.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.EntityFrameworkCore.Relational.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Extensions.Caching.Abstractions.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Extensions.Caching.Memory.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Extensions.DependencyInjection.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Extensions.Logging.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Extensions.Logging.Abstractions.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Extensions.Options.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Extensions.Primitives.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Remotion.Linq.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Collections.Immutable.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Diagnostics.DiagnosticSource.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Interactive.Async.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Helpers.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Mvc.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Optimization.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Razor.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.WebPages.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.WebPages.Deployment.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.WebPages.Razor.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.Abstractions.pdb
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.Configuration.pdb
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.Container.pdb
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.Interception.pdb
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.Interception.Configuration.pdb
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.RegistrationByConvention.pdb
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Unity.ServiceLocation.pdb
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Antlr3.Runtime.pdb
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Newtonsoft.Json.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Net.Http.Formatting.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Http.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\System.Web.Http.WebHost.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AspNet.Identity.Core.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.Facebook.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.Cookies.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.OAuth.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.Google.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.Twitter.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.ApplicationInsights.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AI.DependencyCollector.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AI.WindowsServer.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\bin\Microsoft.AI.Web.xml
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\obj\Debug\NUS.TheAmazingRace.Web.csprojResolveAssemblyReference.cache
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\obj\Debug\NUS.TheAmazingRace.Web.csproj.CoreCompileInputs.cache
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\obj\Debug\NUS.TheAmazingRace.Web.csproj.CopyComplete
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\obj\Debug\NUS.TheAmazingRace.Web.dll
+C:\c# programming\fresh code\The-Amaging-Race\NUS.TheAmazingRace.Web\obj\Debug\NUS.TheAmazingRace.Web.pdb

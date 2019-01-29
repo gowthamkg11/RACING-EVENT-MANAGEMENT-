@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -13,6 +14,12 @@ using NUS.TheAmazingRace.Web.Models;
 
 namespace NUS.TheAmazingRace.Web.Controllers
 {
+    /*<summary>
+	This is the Controller class for Accounts,
+	The Account Creation,Remember Me,Forgot password
+    and login are present here,
+	</summary>*/
+
     [Authorize]
     public class AccountController : Controller
     {
@@ -23,7 +30,7 @@ namespace NUS.TheAmazingRace.Web.Controllers
         {
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
+        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
         {
             UserManager = userManager;
             SignInManager = signInManager;
@@ -35,9 +42,9 @@ namespace NUS.TheAmazingRace.Web.Controllers
             {
                 return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
             }
-            private set 
-            { 
-                _signInManager = value; 
+            private set
+            {
+                _signInManager = value;
             }
         }
 
@@ -53,8 +60,10 @@ namespace NUS.TheAmazingRace.Web.Controllers
             }
         }
 
-        //
-        // GET: /Account/Login
+        /* Gets the account login information
+         * <return> Returns the Login Page </return>
+         * GET: /Account/Login */
+
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
@@ -62,8 +71,10 @@ namespace NUS.TheAmazingRace.Web.Controllers
             return View();
         }
 
-        //
-        // POST: /Account/Login
+        /* Verifies from LocalDB for previous existence
+         * and returns the post method of Login
+         * POST: /Account/Login */
+
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -74,8 +85,9 @@ namespace NUS.TheAmazingRace.Web.Controllers
                 return View(model);
             }
 
-            // This doesn't count login failures towards account lockout
-            // To enable password failures to trigger account lockout, change to shouldLockout: true
+            /* This doesn't count login failures towards account lockout
+            To enable password failures to trigger account lockout, change to shouldLockout: true */
+
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
@@ -92,8 +104,9 @@ namespace NUS.TheAmazingRace.Web.Controllers
             }
         }
 
-        //
-        // GET: /Account/VerifyCode
+        /* Verify and return the code for login information
+         GET: /Account/VerifyCode */
+
         [AllowAnonymous]
         public async Task<ActionResult> VerifyCode(string provider, string returnUrl, bool rememberMe)
         {
@@ -105,8 +118,10 @@ namespace NUS.TheAmazingRace.Web.Controllers
             return View(new VerifyCodeViewModel { Provider = provider, ReturnUrl = returnUrl, RememberMe = rememberMe });
         }
 
-        //
-        // POST: /Account/VerifyCode
+
+        /* POST: /Account/VerifyCode */
+
+
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -117,11 +132,12 @@ namespace NUS.TheAmazingRace.Web.Controllers
                 return View(model);
             }
 
-            // The following code protects for brute force attacks against the two factor codes. 
-            // If a user enters incorrect codes for a specified amount of time then the user account 
-            // will be locked out for a specified amount of time. 
-            // You can configure the account lockout settings in IdentityConfig
-            var result = await SignInManager.TwoFactorSignInAsync(model.Provider, model.Code, isPersistent:  model.RememberMe, rememberBrowser: model.RememberBrowser);
+            /* The following code protects for brute force attacks against the two factor codes. 
+            If a user enters incorrect codes for a specified amount of time then the user account 
+            will be locked out for a specified amount of time. 
+            You can configure the account lockout settings in IdentityConfig */
+
+            var result = await SignInManager.TwoFactorSignInAsync(model.Provider, model.Code, isPersistent: model.RememberMe, rememberBrowser: model.RememberBrowser);
             switch (result)
             {
                 case SignInStatus.Success:
@@ -135,16 +151,21 @@ namespace NUS.TheAmazingRace.Web.Controllers
             }
         }
 
-        //
-        // GET: /Account/Register
+        /*
+         GET: /Account/Register
+         Gets the input from the user for validation
+        */
+
         [AllowAnonymous]
         public ActionResult Register()
         {
             return View();
         }
 
-        //
-        // POST: /Account/Register
+
+        /* POST: /Account/Register 
+         validation of registration form and returns the result*/
+
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -152,29 +173,50 @@ namespace NUS.TheAmazingRace.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new TARUser { UserName = model.Email, Email = model.Email };
+                if (model.ImageFile == null)
+                {
+                    model.ImagePath = "~/Content/Images/Empty_pic.png";
+                }
+                else
+                {
+                    string fileName = Path.GetFileNameWithoutExtension(model.ImageFile.FileName);
+                    string extension = Path.GetExtension(model.ImageFile.FileName);
+                    fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                    model.ImagePath = "~/Content/Images/" + fileName;
+                    fileName = Path.Combine(Server.MapPath("~/Content/Images/"), fileName);
+                    model.ImageFile.SaveAs(fileName);
+                }
+
+                var user = new TARUser { CreatedAt = DateTime.Now, LastModifiedAt = DateTime.Now, DisplayName = model.Name, ImagePath = model.ImagePath, UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
-                    // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
-                    // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
-                    return RedirectToAction("Index", "Home");
+                    await UserManager.AddToRoleAsync(user.Id, "Member");
+
+                    /* For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
+                     Send an email with this link
+                    string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                    var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                    await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>"); */
+
+
+                    ModelState.Clear();
+
+                    return RedirectToAction("Index", "DashBoard");
                 }
                 AddErrors(result);
             }
 
-            // If we got this far, something failed, redisplay form
+            /* If we got this far, something failed, redisplay form */
+
             return View(model);
         }
 
-        //
-        // GET: /Account/ConfirmEmail
+        /* Sending form for email validation
+         GET: /Account/ConfirmEmail */
+
         [AllowAnonymous]
         public async Task<ActionResult> ConfirmEmail(string userId, string code)
         {
@@ -186,16 +228,22 @@ namespace NUS.TheAmazingRace.Web.Controllers
             return View(result.Succeeded ? "ConfirmEmail" : "Error");
         }
 
-        //
-        // GET: /Account/ForgotPassword
+        /*
+         GET: /Account/ForgotPassword
+         Gets data for forget of password
+        */
+
         [AllowAnonymous]
         public ActionResult ForgotPassword()
         {
             return View();
         }
 
-        //
-        // POST: /Account/ForgotPassword
+
+        /* Returns the validation for forgot password
+         * POST: /Account/ForgotPassword */
+
+
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -210,36 +258,39 @@ namespace NUS.TheAmazingRace.Web.Controllers
                     return View("ForgotPasswordConfirmation");
                 }
 
-                // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
-                // Send an email with this link
-                // string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
-                // var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);		
-                // await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
-                // return RedirectToAction("ForgotPasswordConfirmation", "Account");
+                /* For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
+                 Send an email with this link
+                 string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
+                 var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);		
+                 await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                 return RedirectToAction("ForgotPasswordConfirmation", "Account"); */
             }
 
             // If we got this far, something failed, redisplay form
             return View(model);
         }
 
-        //
-        // GET: /Account/ForgotPasswordConfirmation
+        /* validation for Forgot Password 
+         GET: /Account/ForgotPasswordConfirmation */
+
         [AllowAnonymous]
         public ActionResult ForgotPasswordConfirmation()
         {
             return View();
         }
 
-        //
-        // GET: /Account/ResetPassword
+        /* validation for Reset Password 
+         GET: /Account/ResetPassword */
+
         [AllowAnonymous]
         public ActionResult ResetPassword(string code)
         {
             return code == null ? View("Error") : View();
         }
 
-        //
-        // POST: /Account/ResetPassword
+        /* Post method for reset password validation
+         POST: /Account/ResetPassword */
+
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -264,7 +315,9 @@ namespace NUS.TheAmazingRace.Web.Controllers
             return View();
         }
 
-        //
+        /*<summary>
+		 This method is used to confirm password reset
+		</summary>*/
         // GET: /Account/ResetPasswordConfirmation
         [AllowAnonymous]
         public ActionResult ResetPasswordConfirmation()
@@ -272,8 +325,9 @@ namespace NUS.TheAmazingRace.Web.Controllers
             return View();
         }
 
-        //
+
         // POST: /Account/ExternalLogin
+
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -283,8 +337,9 @@ namespace NUS.TheAmazingRace.Web.Controllers
             return new ChallengeResult(provider, Url.Action("ExternalLoginCallback", "Account", new { ReturnUrl = returnUrl }));
         }
 
-        //
+
         // GET: /Account/SendCode
+
         [AllowAnonymous]
         public async Task<ActionResult> SendCode(string returnUrl, bool rememberMe)
         {
@@ -298,8 +353,9 @@ namespace NUS.TheAmazingRace.Web.Controllers
             return View(new SendCodeViewModel { Providers = factorOptions, ReturnUrl = returnUrl, RememberMe = rememberMe });
         }
 
-        //
+
         // POST: /Account/SendCode
+
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -318,8 +374,9 @@ namespace NUS.TheAmazingRace.Web.Controllers
             return RedirectToAction("VerifyCode", new { Provider = model.SelectedProvider, ReturnUrl = model.ReturnUrl, RememberMe = model.RememberMe });
         }
 
-        //
+
         // GET: /Account/ExternalLoginCallback
+
         [AllowAnonymous]
         public async Task<ActionResult> ExternalLoginCallback(string returnUrl)
         {
@@ -348,8 +405,9 @@ namespace NUS.TheAmazingRace.Web.Controllers
             }
         }
 
-        //
+
         // POST: /Account/ExternalLoginConfirmation
+
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -386,18 +444,22 @@ namespace NUS.TheAmazingRace.Web.Controllers
             return View(model);
         }
 
-        //
+
         // POST: /Account/LogOff
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            Response.Cookies.Clear();
+            Session.Abandon();
             return RedirectToAction("Index", "Home");
         }
 
-        //
+
         // GET: /Account/ExternalLoginFailure
+
         [AllowAnonymous]
         public ActionResult ExternalLoginFailure()
         {
@@ -446,11 +508,11 @@ namespace NUS.TheAmazingRace.Web.Controllers
 
         private ActionResult RedirectToLocal(string returnUrl)
         {
-            if (Url.IsLocalUrl(returnUrl))
-            {
-                return Redirect(returnUrl);
-            }
-            return RedirectToAction("Index", "Home");
+            //if (Url.IsLocalUrl(returnUrl))
+            //{
+            //    return Redirect(returnUrl);
+            //}
+            return RedirectToAction("Index", "Dashboard");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult
@@ -484,3 +546,4 @@ namespace NUS.TheAmazingRace.Web.Controllers
         #endregion
     }
 }
+

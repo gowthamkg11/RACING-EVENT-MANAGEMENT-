@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Web;
 
 namespace NUS.TheAmagingRace.DAL
 {
@@ -36,15 +38,15 @@ namespace NUS.TheAmagingRace.DAL
         [Display(Name = "End Date")]
         public DateTime EndDate { get; set; }
 
-        [Required]
-        [Display(Name = "PitStops")]
-        public int TotalPitStops { get; set; }
+        [Display(Name = "Upload Image")]
+        public string ImagePath { get; set; }
 
-        [Required]
-        [Display(Name = "Teams")]
-        public int TotalTeams { get; set; }
-
+        [NotMapped]
+        public HttpPostedFileBase ImageFile { get; set; }
 
         public virtual ICollection<Team> Teams { get; set; }
+
+        public virtual ICollection<PitStop> PitStops { get; set; }
+
     }
 }

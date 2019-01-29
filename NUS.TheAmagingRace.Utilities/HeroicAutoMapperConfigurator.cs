@@ -7,7 +7,7 @@ using System.Text;
 
 namespace NUS.TheAmagingRace.Utilities
 {
-    public static class HeroicAutoMapperConfigurator
+    public static class AutoMapperConfigurator
     {
         public static void LoadMapsFromAssemblyContainingTypeAndReferencedAssemblies<TType>(Func<AssemblyName, bool> assemblyFilter = null)
         {

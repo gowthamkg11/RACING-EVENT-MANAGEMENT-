@@ -1,4 +1,10 @@
-﻿
+﻿@media (min-width: 1200px) {
+
+    .container {
+        max-width: 1170px;
+        margin-left: 10px;
+    }
+}
 body {
     color: #801334;
 }
@@ -463,7 +469,12 @@ body {
         border: 1px solid white;
         border-radius: 5px;
     }
-
+.card:after {
+    background: #4b0d0d;
+    color: white !important;
+    border: 1px solid white;
+    border-radius: 5px;
+}
         .card:hover .card-heading {
             color: white !important;
         }
@@ -519,4 +530,30 @@ body {
     padding: 5px;
     border-radius: 0px 4px 4px 4px;
     margin-top:-3px;
+}
+
+@media (max-width: 768px) {
+    a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+        top: auto;
+        bottom: 5px;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%);
+        display: none;
+    }
+}
+
+a[aria-expanded="true"]::before {
+    content: '\e260';
+   
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+    content: '\e259';
+    display: none;
+    position: absolute;
+    right: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.6em;
 }

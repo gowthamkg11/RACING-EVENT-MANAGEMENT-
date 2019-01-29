@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Web;
 
 namespace NUS.TheAmazingRace.Web.Models
 {
@@ -64,6 +66,10 @@ namespace NUS.TheAmazingRace.Web.Models
 
     public class RegisterViewModel
     {
+
+        [Display(Name = "Name")]
+        [Required]
+        public string Name { get; set; }
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
@@ -79,6 +85,11 @@ namespace NUS.TheAmazingRace.Web.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+        [Display(Name = "Choose Profile Pic")]
+        public string ImagePath { get; set; }
+
+        [NotMapped]
+        public HttpPostedFileBase ImageFile { get; set; }
     }
 
     public class ResetPasswordViewModel

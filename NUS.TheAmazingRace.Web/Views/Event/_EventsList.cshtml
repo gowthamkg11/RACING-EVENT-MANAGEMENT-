@@ -1,0 +1,104 @@
+﻿@model IEnumerable<NUS.TheAmagingRace.DAL.Event>
+<script src="~/Scripts/Custom/EventManagement.js"></script>
+<script src="~/Scripts/Custom/PitStop.js"></script>
+<link href="~/Assets/css/scrollBar.css" rel="stylesheet" />
+
+<style>
+    input#SearchString {
+        padding-left: 10px;
+    }
+</style>
+
+<a href="#" class="btn btn-success" onclick="AddEvent()">Create</a><br />
+<br />
+<div align="left">
+    <div class="input-group">
+        <img src="~/Content/Images/Back.png" width="30" height="30" id="searchBack" style=" cursor: pointer;" />&nbsp;
+        <input type="text" style="width:190px" placeholder="search an event" id="SearchString" />
+        <img href="#" id="btnSearch" src="~/Content/Images/search.png" width="30" height="30" style=" cursor: pointer;" />
+    </div>
+</div>
+
+@if (Model.Count() > 0)
+{
+    <div  id="style-3" style="max-height:475px; overflow:auto">
+        
+            @foreach (var v in Model)
+            {
+                var id = "EventCard_" + v.EventID;
+                <div class="card" style="width:18em" id='@id.ToString()'>
+
+                    <div class="card-content">
+
+                        <div class="card-header">
+
+                            <div class="card-heading">
+                                <div style="float:right">
+                                    <a href="#" class="glyphicon glyphicon-pencil" onclick="EditEvent(@v.EventID)"></a>&nbsp;
+                                    <a href="#" class="glyphicon glyphicon-eye-open" onclick="ShowEvent(@v.EventID)"></a>&nbsp;
+                                    <a href="#" class="glyphicon glyphicon-trash" onclick="ConfirmDelete(@v.EventID)"></a>&nbsp;
+                                </div>
+                                <h5 align="left">
+                                    <img class="img-circle" src="@Url.Content(v.ImagePath)" alt="Event Image" width="45" height="45">
+                                    <strong>@v.EventName</strong>
+                                </h5>
+                            </div>
+                        </div>
+
+                        <div style="height:60px" class="card-body" onclick="ShowPitstop(@v.EventID)">
+                            <div class="card-p">
+                                <i>@v.EventDescription</i><br /><br />
+                                Start Date : <i>@v.StartDate.Day-@v.StartDate.Month-@v.StartDate.Year</i><br />
+                                End Date &nbsp; : <i>@v.EndDate.Day-@v.EndDate.Month-@v.EndDate.Year</i>
+                            </div>
+                        </div>
+
+                        <div class="card-footer">
+                            <strong>Last modified by : </strong>@v.LastModifiedBy
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <input type="hidden" id="hiddenEventId" />
+        </div>
+    
+}
+else
+{
+    <div class="NorecordFound">
+        <br />
+        <p> No events to display </p>
+        <p> Click create to add events</p>
+    </div>
+}
+
+<script>
+    $(document).ready(function () {
+        $("#btnSearch").click(function () {
+            var searchval = $("#SearchString").val();
+            var url = "/Event/Search";
+            $.ajax({
+                type: "GET",
+                url: url,
+                data: { searchString: searchval },
+                success: function (data) {
+                    $("#LoadEvent").html(data);
+                }
+            });
+        });
+    });
+
+    $(document).ready(function () {
+        $("#searchBack").click(function () {
+            var url = "/Event/EventsList";
+            $.ajax({
+                type: "GET",
+                url: url,
+                success: function (data) {
+                    $("#LoadEvent").html(data);
+                }
+            });
+        });
+    });
+</script>

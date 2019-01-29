@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>@ViewBag.Title - The Amaging Race</title>
+    <title>@ViewBag.Title - The Amazing Race</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/Custom/Slider.css" rel="stylesheet" />
+    <link rel="icon" href="@Url.Content("~/content/favicon.ico")" />
 
 </head>
 <body>
@@ -14,26 +16,29 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                    @Html.ActionLink("The Amaging Race", "Index", "Home", null, new { @class = "navbar-brand" })
-                
+                @Html.ActionLink("The Amazing Race", "Index", "Dashboard", null, new { @class = "navbar-brand" })
+
 
             </div>
             <div class="navbar-collapse collapse">
-             
+                
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
-        </nav>
-        <div class="container body-content">
-            @RenderBody()
-            <hr />
-            <footer>
-                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-            </footer>
-        </div>
+    </nav>
+    <div class="container body-content">
 
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
+        
+                @RenderBody()
+
+
+            </div>
+
+            <footer>
+                <p>&copy; @DateTime.Now.Year The Amazing Race INC </p>
+            </footer>
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
 </body>
 </html>

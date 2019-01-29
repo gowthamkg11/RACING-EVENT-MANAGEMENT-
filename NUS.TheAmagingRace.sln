@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUS.TheAmagingRace.Utilitie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUS.TheAmagingRace.BAL", "NUS.TheAmagingRace.BAL\NUS.TheAmagingRace.BAL.csproj", "{6C865275-9D3A-4111-BA79-426B6C8818B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUS.TheAmagingRace.BusinessModels", "BusinessModels\NUS.TheAmagingRace.BusinessModels.csproj", "{87A90200-50DC-4BF3-984B-D8BBF09B64D2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPITAR", "WebAPITAR\WebAPITAR\WebAPITAR.csproj", "{7D51FE58-14A0-4CFD-830A-05E53CF6D00B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{6C865275-9D3A-4111-BA79-426B6C8818B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C865275-9D3A-4111-BA79-426B6C8818B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C865275-9D3A-4111-BA79-426B6C8818B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87A90200-50DC-4BF3-984B-D8BBF09B64D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87A90200-50DC-4BF3-984B-D8BBF09B64D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87A90200-50DC-4BF3-984B-D8BBF09B64D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87A90200-50DC-4BF3-984B-D8BBF09B64D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D51FE58-14A0-4CFD-830A-05E53CF6D00B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D51FE58-14A0-4CFD-830A-05E53CF6D00B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D51FE58-14A0-4CFD-830A-05E53CF6D00B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D51FE58-14A0-4CFD-830A-05E53CF6D00B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,29 +1,46 @@
 ﻿@using Microsoft.AspNet.Identity
+@using NUS.TheAmagingRace.DAL.Extensions
+@using NUS.TheAmagingRace.DAL
+@using Microsoft.AspNet.Identity.EntityFramework;
+@{var manager = new UserManager<TARUser>
+          (new UserStore<TARUser>
+              (new TARDBContext()));
+  var currentUser = manager.FindById(Context.User.Identity.GetUserId());
+}
 @if (Request.IsAuthenticated)
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
-    @Html.AntiForgeryToken()
+        @Html.AntiForgeryToken()
 
-    <ul class="nav navbar-nav navbar-right">
-        <li>
-            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-        </li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
-    </ul>
+        <ul class="nav navbar-nav navbar-right">
+
+            <li>
+                <img class="img-circle" src="@Url.Content(currentUser.ImagePath)" alt="@User.Identity.GetUserDisplayName()" height="50" width="50" />
+
+
+            </li>
+            <li>
+                @Html.ActionLink(currentUser.DisplayName, "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+            </li>
+            <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+        </ul>
     }
 }
 else
 {
-   
-        <div class="navbar-collapse collapse">
-            <ul class="nav nav-divider navbar-nav  navbar-right ">
-                <li><a href='@Url.Action("Register", "Account")'><span class="glyphicon glyphicon-user"></span> Register</a></li>
-                <li><a href='@Url.Action("Login", "Account")'><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            </ul>
-        </div>
 
-        @*<li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+    <div class="navbar-collapse collapse">
+        <ul class="nav nav-divider navbar-nav  navbar-right ">
+            <li><a href='@Url.Action("Index", "Dashboard")'><span class="glyphicon glyphicon-user"></span> Live Event</a></li>
+            <li><a href='@Url.Action("Register", "Account")'><span class="glyphicon glyphicon-user"></span> Register</a></li>
+            <li><a href='@Url.Action("Login", "Account")'><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+    </div>
+
+    @*<li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
         <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>*@
-   
+
 }
+
+

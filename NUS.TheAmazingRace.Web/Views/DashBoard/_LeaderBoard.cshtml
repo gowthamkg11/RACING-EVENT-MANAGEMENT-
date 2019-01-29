@@ -1,0 +1,47 @@
+﻿@model IEnumerable<NUS.TheAmagingRace.DAL.Team>
+
+<table class="table" id="leaderBoard">
+    <tr>
+        <th>
+            Rank
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TeamName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Distance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NextPitStop)
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+            <tr>
+                <td id="@("position_" + item.TeamID)">
+                </td>
+                <td id="@("teamName_" + item.TeamID)">
+                    @Html.DisplayFor(modelItem => item.TeamName)
+                </td><
+
+                <td id="@("distance_" + item.TeamID)">
+                    @Html.DisplayFor(modelItem => item.Distance)
+                </td>
+                <td id="@("time_" + item.TeamID)">
+                    @Html.DisplayFor(modelItem => item.Time)
+                </td>
+                <td id="@("nextPit_" + item.TeamID)">
+                    @Html.DisplayFor(modelItem => item.NextPitStop)
+                </td>
+
+            </tr>
+
+        }
+
+</table>

@@ -1,96 +1,73 @@
 ﻿
+
+
 @{
     ViewBag.Title = "Members";
 }
 
 
-<div class="panel-group">
+<div class="panel-group" onload="LoadPanels" id="TARPanels">
     <div class="panel panel-default">
         <div class="panel-heading">Adminstrators</div>
-        <div class="panel-body">No Administrators</div>
+        <div class="panel-body" id="AdminstatorsBody">
+
+        
+        </div>
     </div>
     <div class="panel panel-default">
         <div class="panel-heading">Staff Members</div>
-        <div class="panel-body">
-  
+        <div class="panel-body" id="StaffsBody">
+
 
         </div>
     </div>
     <div class="panel panel-default">
         <div class="panel-heading">Rest of the Users</div>
-        <div class="panel-body">
-            <div class="card">
-                <div class="card-content">
-                    <div class="card-header">
-                        <h1 class="card-heading">Card Header Blue</h1>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-p">
-                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,
-                            or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there
-                            isn't anything embarrassing hidden in the middle of text.
-
-                        </p>
-                    </div>
-
-                    <nav class="nav-tabs">
-                        <ul class="nav nav-pills pull-left">
-                            <li class="card-action"><a href="#">Link</a></li>
-                            <li class="card-action"><a href="#">Link</a></li>
-                            <li class="card-action"><a href="#">Link</a></li>
-                            <li class="card-action"><a href="#">Link</a></li>
-                        </ul>
-
-                    </nav>
-
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <div class="card-header-blue">
-                        <h1 class="card-heading">Card Header Blue</h1>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-p">
-                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,
-                            or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there
-                            isn't anything embarrassing hidden in the middle of text.
-
-                        </p>
-                    </div>
-
-                    <nav class="nav-tabs">
-                        <ul class="nav nav-pills pull-left">
-                            <li class="card-action"><a href="#">Link</a></li>
-                            <li class="card-action"><a href="#">Link</a></li>
-                            <li class="card-action"><a href="#">Link</a></li>
-                            <li class="card-action"><a href="#">Link</a></li>
-                        </ul>
-
-                    </nav>
-
-                </div>
-            </div>
+        <div class="panel-body"  id="MembersBody">
+           
         </div>
     </div>
 
 </div>
 <script type="text/javascript">
-
-  $('ul.dd-header').click(function(e) {
-  
-  var $el = $(this).find('ul.hidden');
-  var $opened = $('.toggledDown').not($el);
-  $opened.toggleClass('toggledDown');
-  $opened.slideToggle();
-  $el.toggleClass('toggledDown');
-  $el.stop().slideToggle();
-
-  if( $(this).hasClass('select') ) {
-            $(this).removeClass('select').addClass('hidden');
-        } else {
-            $(this).siblings().removeClass('select').addClass('hidden'); 
-      $(this).removeClass('hidden').addClass('select');
+    $("#TARPanels").on("Load", LoadPanels(this));
+    function LoadPanels(e) {
+        LoadAdministratorPanel(e);
+        LoadStaffPanel(e);
+        LoadMemberPanel(e);
     }
-});
+    function LoadAdministratorPanel(e) {
+
+        ajaxGet("loaderdiv", '@Url.Action("LoadAdministrators","Member")', [], function (data) {
+
+            $("#AdminstatorsBody").html(data);
+        },
+            function (error, data, status) { });
+    }
+   
+    function LoadStaffPanel(e) {
+        @*$("#StaffsBody").load('@Url.Action("LoadStaff", "Member")', function () {
+
+        });*@
+
+         ajaxGet("loaderdiv", '@Url.Action("LoadStaff", "Member")', [], function (data) {
+
+             $("#StaffsBody").html(data);
+        },
+            function (error, data, status) { });
+    }
+    function LoadMemberPanel(e) {
+        @*$("#MembersBody").load('@Url.Action("LoadMembers", "Member")', function () {
+
+        });*@
+                 ajaxGet("loaderdiv", '@Url.Action("LoadMembers", "Member")', [], function (data) {
+
+                     $("#MembersBody").html(data);
+        },
+            function (error, data, status) { });
+    }
+    function ajaxLoadPartialView(url, type, progresstimeout, successfunction) {
+
+    }
+
 </script>

@@ -16,21 +16,24 @@ namespace NUS.TheAmagingRace.DAL
         public TARDBContext()
         : base("TARDBConnection", throwIfV1Schema: false)
         {
-            Database.SetInitializer<TARDBContext>(new TestDataInitializer());
+            //Database.SetInitializer<TARDBContext>(new TestDataInitializer());
             Configuration.ProxyCreationEnabled = false;
-            Configuration.LazyLoadingEnabled = false;
+            Configuration.LazyLoadingEnabled = true;
         }
         public DbSet<Event> Events { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<PitStop> PitStops { get; set; }
         public DbSet<Location> Locations { get; set; }
+        public DbSet<Member> Members { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
-
-
+            modelBuilder.Conventions.Add<OneToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Add<ManyToManyCascadeDeleteConvention>();
+            modelBuilder.Entity<PitStop>().HasRequired(m => m.Event).WithMany(n => n.PitStops).WillCascadeOnDelete(true);
+            modelBuilder.Entity<Team>().HasRequired(m => m.Event).WithMany(n => n.Teams).WillCascadeOnDelete(true);
+            modelBuilder.Entity<Member>().HasRequired(m => m.Team).WithMany(n => n.Members).WillCascadeOnDelete(true);
             //modelBuilder.Entity<TARUser>()
             // .Property(c => c.Id)
             // .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
@@ -104,6 +107,6 @@ namespace NUS.TheAmagingRace.DAL
             return new TARDBContext();
         }
 
-
+       // public System.Data.Entity.DbSet<NUS.TheAmagingRace.DAL.TARUser> TARUsers { get; set; }
     }
 }

@@ -1,10 +1,20 @@
 ﻿@model NUS.TheAmagingRace.DAL.Event
 
+<style>
+    input[type="file"] {
+        display: none;
+    }
 
+    .custom-file-upload {
+        display: inline-block;
+        padding: 6px 12px;
+        cursor: pointer;
+    }
+</style>
 
 <form id="editForm">
     @Html.AntiForgeryToken()
-   @Html.HiddenFor(model => model.EventID, htmlAttributes: new { @class = "control-label col-md-2" })
+    @Html.HiddenFor(model => model.EventID, htmlAttributes: new { @class = "control-label col-md-2" })
     <div class="form-horizontal">
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -54,18 +64,15 @@
                 @Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger" })
             </div>
         </div>
+
         <div class="form-group">
-            @Html.LabelFor(model => model.TotalPitStops, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.ImagePath, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.TotalPitStops, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TotalPitStops, "", new { @class = "text-danger" })
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.TotalTeams, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TotalTeams, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TotalTeams, "", new { @class = "text-danger" })
+                <label class="custom-file-upload">
+                    <input type="file" name="ImageFile" id="imgEditEvent" />
+                    <img id="eventEditImageId" src="@Url.Content(Model.ImagePath)" alt="your image" width="60" height="60" />
+                </label>
+                click on the image to upload
             </div>
         </div>
 
@@ -85,22 +92,42 @@
     @Scripts.Render("~/bundles/jqueryval")
 
 }
+
 <script>
     $(document).ready(function () {
         $("#btnsubmit").click(function () {
             $("#loaderDiv").show();
-            var formData = $("#editForm").serialize();
+            var formData = new FormData($("#editForm")[0]);
             $.ajax({
                 type: "POST",
-                url: "/Event/Index",
+                url: "/Event/EventsList",
                 data: formData,
-                success: function () {
-                    $("#loaderDiv").hide(); 
+                processData: false,
+                contentType: false,
+                success: function (data) {
+                    $("#loaderDiv").hide();
                     $("#ModalEdit").modal("hide");
-                    window.location.href = "/Event/Index";
+                    $("#refresh").empty();
+                    $("#refresh").html("<div class='NorecordFound'><br /> <p> Select an event to view Pit stops</p> </div>");
+                    $("#LoadEvent").html(data);
                 }
             })
-
         })
     })
+</script>
+
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#eventEditImageId').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $("#imgEditEvent").change(function () {
+        readURL(this);
+    });
+
 </script>

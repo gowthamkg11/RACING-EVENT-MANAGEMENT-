@@ -1,0 +1,63 @@
+﻿@model IEnumerable<NUS.TheAmagingRace.BusinessModels.TeamViewModel>
+
+<p>
+    <button class="btn btn-success" onclick="AddTeam()">Create Team</button>
+</p>
+<input type="hidden" id="teamIdNeeded" value="" />
+<div class="panel-group" onload="LoadPanels" id="TARPanels">
+
+    @if (Model?.Count() > 0)
+    {
+
+        foreach (var item in Model)
+        {
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                       
+                    <h5> @Html.DisplayFor(modelItem => item.TeamName)</h5>
+                    <div align="right">
+                        <a href="#" onclick="MemberCreate(@item.TeamID)" class="btn btn-success btn-xs right">Add Member</a>&nbsp;
+                        <a href="#" class="glyphicon glyphicon-trash" style="color:red" onclick="deleteTeam(@item.TeamID)"></a>
+                    </div>  
+                       
+                            </div>
+                <div class="panel-body" id='@item.TeamID'>
+                    @*@{Html.RenderAction("Index", "Promo", new { slug = "drink" });}*@
+                    @{Html.RenderAction("getMember", "Team", new { teamId = item.TeamID });}
+                </div>
+            </div>
+
+        }
+    }
+    else
+    {
+        <div class="NorecordFound">
+            <br />
+            <p> No Teams to display </p>
+            <p> Click create Team to add</p>
+        </div>
+    }
+</div>
+<script>
+    var AddTeam = function () {
+        var eventId = $("#hiddenEventId").val();
+        ajaxGet("LoaderDiv", '@Url.Action("CreateTeam","Team")', { EventID: eventId }, function (data) {
+
+            $("#ModalBodyAdd").html(data);
+            $("#ModalAdd").modal("show");
+        }, function (error) { });
+       
+        
+    };
+
+    var MemberCreate = function (TeamId) {
+        var eventId = $("#hiddenEventId").val();
+        $("#teamIdNeeded").val(TeamId);
+        ajaxGet("LoaderDiv", '@Url.Action("CreateMember","Team")', { TeamID: TeamId, eventId: eventId }, function (data) {
+            $("#ModalMemberAdd").html(data);
+            $("#ModalMember").modal("show");
+        }, function (error) { });
+    }
+</script>

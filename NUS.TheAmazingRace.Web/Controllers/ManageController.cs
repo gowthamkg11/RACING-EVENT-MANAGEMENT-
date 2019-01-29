@@ -1,20 +1,34 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using NUS.TheAmagingRace.BAL;
+using NUS.TheAmagingRace.BusinessModels;
+using NUS.TheAmagingRace.DAL;
 using NUS.TheAmazingRace.Web.Models;
 
 namespace NUS.TheAmazingRace.Web.Controllers
 {
+    /*<summary>
+   This is the Controller class for ManagingAccounts,
+   The Account Updation ,Reset password and external logins 
+   and phone number verification are present here,
+   </summary>*/
+
     [Authorize]
     public class ManageController : Controller
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+
+
+        private TARDBContext context = new TARDBContext();
 
         public ManageController()
         {
@@ -32,9 +46,9 @@ namespace NUS.TheAmazingRace.Web.Controllers
             {
                 return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
             }
-            private set 
-            { 
-                _signInManager = value; 
+            private set
+            {
+                _signInManager = value;
             }
         }
 
@@ -50,7 +64,9 @@ namespace NUS.TheAmazingRace.Web.Controllers
             }
         }
 
-        //
+        /*<summary>
+		 This method is used to Edit login informations
+		</summary>*/
         // GET: /Manage/Index
         public async Task<ActionResult> Index(ManageMessageId? message)
         {
@@ -75,7 +91,9 @@ namespace NUS.TheAmazingRace.Web.Controllers
             return View(model);
         }
 
-        //
+        /*<summary>
+		Post method for login informations
+		</summary>*/
         // POST: /Manage/RemoveLogin
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -99,15 +117,19 @@ namespace NUS.TheAmazingRace.Web.Controllers
             return RedirectToAction("ManageLogins", new { Message = message });
         }
 
-        //
+        /*<summary>
+		 This method is used to add phone number
+		</summary>*/
         // GET: /Manage/AddPhoneNumber
+
         public ActionResult AddPhoneNumber()
         {
             return View();
         }
 
-        //
+
         // POST: /Manage/AddPhoneNumber
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> AddPhoneNumber(AddPhoneNumberViewModel model)
@@ -130,8 +152,11 @@ namespace NUS.TheAmazingRace.Web.Controllers
             return RedirectToAction("VerifyPhoneNumber", new { PhoneNumber = model.Number });
         }
 
-        //
+        /*<summary>
+		 This method is used to Two factor aunthentication
+		</summary>*/
         // POST: /Manage/EnableTwoFactorAuthentication
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> EnableTwoFactorAuthentication()
@@ -145,8 +170,11 @@ namespace NUS.TheAmazingRace.Web.Controllers
             return RedirectToAction("Index", "Manage");
         }
 
-        //
+        /*<summary>
+		 This method is used to disable Two factor aunthentication
+        </summary>*/
         // POST: /Manage/DisableTwoFactorAuthentication
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DisableTwoFactorAuthentication()
@@ -160,7 +188,9 @@ namespace NUS.TheAmazingRace.Web.Controllers
             return RedirectToAction("Index", "Manage");
         }
 
-        //
+        /*<summary>
+		 This method is used for phone number verification
+        </summary>*/
         // GET: /Manage/VerifyPhoneNumber
         public async Task<ActionResult> VerifyPhoneNumber(string phoneNumber)
         {
@@ -169,7 +199,7 @@ namespace NUS.TheAmazingRace.Web.Controllers
             return phoneNumber == null ? View("Error") : View(new VerifyPhoneNumberViewModel { PhoneNumber = phoneNumber });
         }
 
-        //
+
         // POST: /Manage/VerifyPhoneNumber
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -194,8 +224,11 @@ namespace NUS.TheAmazingRace.Web.Controllers
             return View(model);
         }
 
-        //
+        /*<summary>
+		 This method is used to delete phone number
+        </summary>*/
         // POST: /Manage/RemovePhoneNumber
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> RemovePhoneNumber()
@@ -213,15 +246,19 @@ namespace NUS.TheAmazingRace.Web.Controllers
             return RedirectToAction("Index", new { Message = ManageMessageId.RemovePhoneSuccess });
         }
 
-        //
+        /*<summary>
+		 This method is used to change password
+        </summary>*/
         // GET: /Manage/ChangePassword
+
         public ActionResult ChangePassword()
         {
             return View();
         }
 
-        //
+
         // POST: /Manage/ChangePassword
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> ChangePassword(ChangePasswordViewModel model)
@@ -244,15 +281,19 @@ namespace NUS.TheAmazingRace.Web.Controllers
             return View(model);
         }
 
-        //
+        /*<summary>
+		 This method is used to set password
+        </summary>*/
         // GET: /Manage/SetPassword
+
         public ActionResult SetPassword()
         {
             return View();
         }
 
-        //
+
         // POST: /Manage/SetPassword
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> SetPassword(SetPasswordViewModel model)
@@ -276,8 +317,9 @@ namespace NUS.TheAmazingRace.Web.Controllers
             return View(model);
         }
 
-        //
+
         // GET: /Manage/ManageLogins
+
         public async Task<ActionResult> ManageLogins(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
@@ -299,8 +341,9 @@ namespace NUS.TheAmazingRace.Web.Controllers
             });
         }
 
-        //
+
         // POST: /Manage/LinkLogin
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult LinkLogin(string provider)
@@ -309,8 +352,9 @@ namespace NUS.TheAmazingRace.Web.Controllers
             return new AccountController.ChallengeResult(provider, Url.Action("LinkLoginCallback", "Manage"), User.Identity.GetUserId());
         }
 
-        //
+
         // GET: /Manage/LinkLoginCallback
+
         public async Task<ActionResult> LinkLoginCallback()
         {
             var loginInfo = await AuthenticationManager.GetExternalLoginInfoAsync(XsrfKey, User.Identity.GetUserId());
@@ -320,6 +364,51 @@ namespace NUS.TheAmazingRace.Web.Controllers
             }
             var result = await UserManager.AddLoginAsync(User.Identity.GetUserId(), loginInfo.Login);
             return result.Succeeded ? RedirectToAction("ManageLogins") : RedirectToAction("ManageLogins", new { Message = ManageMessageId.Error });
+        }
+
+        public ActionResult ChangeProfilePic()
+        {
+            TARUser model = UserManager.FindById(User.Identity.GetUserId());
+
+            ChangeProfileViewModel c = new ChangeProfileViewModel { Name = model.DisplayName };
+            return PartialView("_ChangeProfilePic", c);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> ChangeProfilePicAsync(ChangeProfileViewModel model)
+        {
+            TARUser currentUser = UserManager.FindById(User.Identity.GetUserId());
+            if (ModelState.IsValid)
+            {
+
+
+                if (model.ImageFile == null)
+                {
+                    model.ImagePath = currentUser.ImagePath;
+                }
+                else
+                {
+                    string fileName = Path.GetFileNameWithoutExtension(model.ImageFile.FileName);
+                    string extension = Path.GetExtension(model.ImageFile.FileName);
+                    fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                    model.ImagePath = "~/Content/Images/" + fileName;
+                    fileName = Path.Combine(Server.MapPath("~/Content/Images/"), fileName);
+                    model.ImageFile.SaveAs(fileName);
+                }
+
+                currentUser.ImagePath = model.ImagePath;
+                currentUser.DisplayName = model.Name;
+
+                var manager = new UserManager<TARUser>
+         (new UserStore<TARUser>
+             (new TARDBContext()));
+
+                context.Entry(currentUser).State = System.Data.Entity.EntityState.Modified;
+                await context.SaveChangesAsync();
+
+                return RedirectToAction("Index");
+            }
+            return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
@@ -333,7 +422,7 @@ namespace NUS.TheAmazingRace.Web.Controllers
             base.Dispose(disposing);
         }
 
-#region Helpers
+        #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 
@@ -384,6 +473,6 @@ namespace NUS.TheAmazingRace.Web.Controllers
             Error
         }
 
-#endregion
+        #endregion
     }
 }
